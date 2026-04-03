@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="icon" type="image/png" sizes="32x32" href="avatar.png">
-<link rel="icon" type="image/png" sizes="16x16" href="avatar.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SuperHarold | Starfield</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="avatar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="avatar.png">
+
   <style>
     :root {
       --bg: #07090d;
@@ -24,6 +26,7 @@
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -153,15 +156,49 @@
       box-shadow: 0 10px 30px rgba(0,0,0,.22);
     }
 
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      padding: 16px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,.02);
-    }
+   .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 28px;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.02);
+}
+
+.filters-block {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-block {
+  flex: 0 0 320px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.search {
+  width: 100%;
+  min-width: 0;
+  max-width: 320px;
+  padding: 11px 12px;
+  border-radius: 4px;
+  border: 1px solid #3e4d60;
+  background: #0d1218;
+  color: var(--text);
+  outline: none;
+}
 
     .toolbar-label {
       color: #dae3ec;
@@ -260,6 +297,7 @@
       text-transform: uppercase;
       letter-spacing: .08em;
       margin: 0 0 10px;
+      text-align: center;
     }
 
     .side-links {
@@ -322,34 +360,6 @@
       transform: translateY(-2px);
     }
 
-    .mini-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin: 14px 0 0;
-    }
-
-    .stat {
-      background: rgba(255,255,255,.03);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 12px;
-    }
-
-    .stat-label {
-      color: var(--muted);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-      margin-bottom: 6px;
-    }
-
-    .stat-value {
-      font-size: 24px;
-      font-weight: bold;
-      color: white;
-    }
-
     .footer {
       margin-top: 16px;
       color: var(--muted);
@@ -362,16 +372,129 @@
     }
 
     @media (max-width: 760px) {
-      .page { width: min(100% - 20px, 1300px); }
-      .topbar { align-items: flex-start; }
-      .brand { align-items: flex-start; }
-      .avatar { width: 58px; height: 58px; }
-      .logo { max-width: 100%; }
-      .hero { grid-template-columns: 1fr; }
-      .hero-art { border-left: 0; border-top: 1px solid var(--line); }
-      .hero h1 { font-size: 30px; }
-      .search { min-width: 100%; margin-left: 0; }
-      .mini-stats { grid-template-columns: 1fr; }
+      .page {
+        width: calc(100% - 16px);
+        padding: 12px 0 24px;
+      }
+
+      .logo {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 14px;
+        padding-bottom: 6px;
+      }
+
+      .brand {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .avatar {
+        width: 52px;
+        height: 52px;
+      }
+
+      .logo {
+        max-width: calc(100% - 70px);
+        width: auto;
+      }
+
+      .tagline {
+        display: none;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        padding: 18px 16px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+        line-height: 1.1;
+      }
+
+      .hero p {
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .hero-art {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        min-height: 160px;
+      }
+
+      .hero-art img {
+        width: 110px;
+        height: 110px;
+      }
+
+      .toolbar {
+        padding: 12px;
+        gap: 8px;
+      }
+
+      .toolbar-label {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2px;
+      }
+
+      .btn {
+        flex: 1 1 calc(50% - 8px);
+        text-align: center;
+        padding: 10px 8px;
+        font-size: 12px;
+      }
+
+      .search {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      table {
+        min-width: 700px;
+      }
+
+      th, td {
+        padding: 10px 10px;
+        font-size: 14px;
+      }
+
+      .side-title {
+        font-size: 16px;
+      }
+
+      .side-link {
+        padding: 16px 12px;
+        font-size: 14px;
+      }
+
+      .social {
+        padding: 14px;
+      }
     }
   </style>
 </head>
@@ -379,7 +502,7 @@
   <div class="page">
     <div class="topbar">
       <div class="brand">
-        <img class="avatar" src="avatar.png" alt="Avatar"">
+        <img class="avatar" src="avatar.png" alt="Avatar">
         <img class="logo" src="Logo_fuente.png" alt="Logo">
       </div>
     </div>
@@ -390,11 +513,9 @@
           <div class="hero-copy">
             <h1>Modificadores legendarios</h1>
             <p>
-              Listado con los <strong>efectos legendarios</strong> de equipo para <strong>Starfield</strong>, armas,
-              armaduras, cascos y mochilas.
+              Listado con los <strong>efectos legendarios</strong> de equipo para <strong>Starfield</strong>: armas,
+              trajes, cascos y mochilas.
             </p>
-            <div>
-            </div>
           </div>
           <div class="hero-art">
             <img src="avatar.png" alt="Logo">
@@ -402,14 +523,30 @@
         </section>
 
         <section class="panel">
-          <div class="toolbar">
-            <span class="toolbar-label">Filtro</span>
-            <button class="btn active" data-filter="all">Todo</button>
-            <button class="btn" data-filter="spacesuit">Traje</button>
-            <button class="btn" data-filter="helmet">Casco</button>
-            <button class="btn" data-filter="pack">Mochila</button>
-            <input id="search" class="search" type="text" placeholder="Buscar rasgo, tipo o descripción...">
-          </div>
+       <div class="toolbar">
+  <div class="filters-block">
+    <div class="filter-row">
+      <span class="toolbar-label">Categoría</span>
+      <button class="btn active" data-filter="all">Todo</button>
+      <button class="btn" data-filter="weapon">Armas</button>
+      <button class="btn" data-filter="spacesuit">Traje</button>
+      <button class="btn" data-filter="helmet">Casco</button>
+      <button class="btn" data-filter="pack">Mochila</button>
+    </div>
+
+    <div class="filter-row">
+      <span class="toolbar-label">Slot</span>
+      <button class="btn slot-btn active" data-slot="all">Todos</button>
+      <button class="btn slot-btn" data-slot="1">Slot 1</button>
+      <button class="btn slot-btn" data-slot="2">Slot 2</button>
+      <button class="btn slot-btn" data-slot="3">Slot 3</button>
+    </div>
+  </div>
+
+  <div class="search-block">
+    <input id="search" class="search" type="text" placeholder="Buscar rasgo, tipo o descripción...">
+  </div>
+</div>
 
           <div class="table-wrap">
             <table>
@@ -426,8 +563,7 @@
           </div>
         </section>
 
-        <div class="footer">
-        </div>
+        <div class="footer"></div>
       </main>
 
       <aside>
@@ -443,82 +579,136 @@
           <strong>Sígueme</strong>
           <a href="https://www.youtube.com/@superharold" target="_blank">YouTube</a>
           <a href="https://www.instant-gaming.com/es/?igr=superharold" target="_blank">Ofertas de juegos</a>
+          <a href="https://x.com/SuperHarOld8" target="_blank">X (Twitter)</a>
         </div>
       </aside>
     </div>
   </div>
 
-  <script>
-    const traits = [
-      { slot: 1, prefix: 'Ablativo', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de Energía recibido.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 1, prefix: 'Antibalístico', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño Físico recibido de armas a distancia.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 2, prefix: 'Antiséptico', type: 'Traje espacial, Casco, Mochila', description: '+25 de Resistencia aérea.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 3, prefix: 'Blindado', type: 'Mochila', description: '-10% de daño Físico, Energía y EM recibido.', tags: ['pack'] },
-      { slot: 3, prefix: 'Carga asistida', type: 'Mochila', description: 'Consume un 75% menos de O2 al correr con sobrepeso.', tags: ['pack'] },
-      { slot: 1, prefix: 'Cazador de bestias', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos alienígenas.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 1, prefix: 'Reforzado', type: 'Traje espacial, Casco, Mochila', description: 'Otorga hasta +100 de resistencia a Energía y Física cuanto menor sea tu salud.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 1, prefix: 'Camaleón', type: 'Traje espacial, Casco, Mochila', description: 'Te camuflas con el entorno al ir en sigilo y permanecer inmóvil.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 1, prefix: 'Veterano de combate', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos humanos.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 2, prefix: 'Ajustado', type: 'Mochila', description: '+20 a la capacidad de carga.', tags: ['pack'] },
-      { slot: 2, prefix: 'Galvanizado', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia corrosiva.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 3, prefix: 'Incendiario', type: 'Traje espacial, Casco, Mochila', description: '10% de probabilidad de incendiar a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 2, prefix: 'Revestido de plomo', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia a la radiación.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 2, prefix: 'Refrigeración líquida', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia térmica.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 3, prefix: 'Espejado', type: 'Traje espacial, Casco, Mochila', description: '4% de probabilidad de reflejar ataques.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 1, prefix: 'O2 mejorado', type: 'Casco, Mochila', description: '+20% de capacidad de oxígeno.', tags: ['helmet', 'pack'] },
-      { slot: 1, prefix: 'Filtro de O2', type: 'Casco, Mochila', description: '-25% de consumo de oxígeno.', tags: ['helmet', 'pack'] },
-      { slot: 3, prefix: 'Pacificador', type: 'Traje espacial, Casco, Mochila', description: 'Los rifles hacen un 10% más de daño.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 3, prefix: 'Reactivo', type: 'Traje espacial, Casco, Mochila', description: '10% de probabilidad de tambalear a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 3, prefix: 'Repulsor', type: 'Traje espacial, Casco, Mochila', description: '5% de probabilidad de desarmar a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 2, prefix: 'Transportista de recursos', type: 'Traje espacial, Casco, Mochila', description: 'Los recursos pesan un 25% menos.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 1, prefix: 'Robusto', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño cuerpo a cuerpo recibido.', tags: ['spacesuit', 'helmet', 'pack'] },
-      { slot: 1, prefix: 'Técnico', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos robóticos.', tags: ['spacesuit', 'helmet', 'pack'] }
-    ];
+ <script>
+  const traits = [
+    { slot: 1, prefix: 'Ablativo', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de Energía recibido.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 1, prefix: 'Antibalístico', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño Físico recibido de armas a distancia.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 2, prefix: 'Antiséptico', type: 'Traje espacial, Casco, Mochila', description: '+25 de Resistencia aérea.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 3, prefix: 'Blindado', type: 'Mochila', description: '-10% de daño Físico, Energía y EM recibido.', tags: ['pack'] },
+    { slot: 3, prefix: 'Carga asistida', type: 'Mochila', description: 'Consume un 75% menos de O2 al correr con sobrepeso.', tags: ['pack'] },
+    { slot: 1, prefix: 'Cazador de bestias', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos alienígenas.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 1, prefix: 'Reforzado', type: 'Traje espacial, Casco, Mochila', description: 'Otorga hasta +100 de resistencia a Energía y Física cuanto menor sea tu salud.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 1, prefix: 'Camaleón', type: 'Traje espacial, Casco, Mochila', description: 'Te camuflas con el entorno al ir en sigilo y permanecer inmóvil.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 1, prefix: 'Veterano de combate', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos humanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 2, prefix: 'Ajustado', type: 'Mochila', description: '+20 a la capacidad de carga.', tags: ['pack'] },
+    { slot: 2, prefix: 'Galvanizado', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia corrosiva.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 3, prefix: 'Incendiario', type: 'Traje espacial, Casco, Mochila', description: '10% de probabilidad de incendiar a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 2, prefix: 'Revestido de plomo', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia a la radiación.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 2, prefix: 'Refrigeración líquida', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia térmica.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 3, prefix: 'Espejado', type: 'Traje espacial, Casco, Mochila', description: '4% de probabilidad de reflejar ataques.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 1, prefix: 'O2 mejorado', type: 'Casco, Mochila', description: '+20% de capacidad de oxígeno.', tags: ['helmet', 'pack'] },
+    { slot: 1, prefix: 'Filtro de O2', type: 'Casco, Mochila', description: '-25% de consumo de oxígeno.', tags: ['helmet', 'pack'] },
+    { slot: 3, prefix: 'Pacificador', type: 'Traje espacial, Casco, Mochila', description: 'Los rifles hacen un 10% más de daño.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 3, prefix: 'Reactivo', type: 'Traje espacial, Casco, Mochila', description: '10% de probabilidad de tambalear a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 3, prefix: 'Repulsor', type: 'Traje espacial, Casco, Mochila', description: '5% de probabilidad de desarmar a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 2, prefix: 'Transportista de recursos', type: 'Traje espacial, Casco, Mochila', description: 'Los recursos pesan un 25% menos.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 1, prefix: 'Robusto', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño cuerpo a cuerpo recibido.', tags: ['spacesuit', 'helmet', 'pack'] },
+    { slot: 1, prefix: 'Técnico', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos robóticos.', tags: ['spacesuit', 'helmet', 'pack'] },
 
-    const rows = document.getElementById('rows');
-    const buttons = document.querySelectorAll('.btn');
-    const search = document.getElementById('search');
-    let active = 'all';
-    let query = '';
+    { slot: 1, prefix: 'Antipersonal', type: 'Armas', description: '+10% de daño contra humanos.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Golpeador', type: 'Armas', description: 'Inflige el doble de daño al golpear con el arma.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Berserker', type: 'Armas', description: 'Hace más daño cuanto menor armadura tengas.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Acorralado', type: 'Armas', description: 'El daño aumenta a medida que baja tu salud.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Desensamblador', type: 'Armas', description: '+20% de daño contra robots.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Cargador ampliado', type: 'Armas', description: 'Duplica la capacidad base del cargador.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Exterminador', type: 'Armas', description: '+30% de daño contra alienígenas.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Furioso', type: 'Armas', description: 'Cada impacto consecutivo inflige más daño.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Instigador', type: 'Armas', description: 'Inflige el doble de daño a objetivos con la salud completa.', tags: ['weapon'] },
+    { slot: 1, prefix: 'Adaptado al espacio', type: 'Armas', description: '+30% de daño en el espacio y -15% de daño en planetas.', tags: ['weapon'] },
 
-    function filterItem(item) {
-      const byType = active === 'all' ? true : item.tags.includes(active);
-      const haystack = `${item.trait} ${item.prefix} ${item.type} ${item.description}`.toLowerCase();
-      const bySearch = haystack.includes(query.toLowerCase());
-      return byType && bySearch;
-    }
+    { slot: 2, prefix: 'Corrosivo', type: 'Armas', description: 'A veces inflige daño corrosivo y reduce la armadura del objetivo durante 6 segundos.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Lisiador', type: 'Armas', description: 'Inflige +30% de daño en el siguiente ataque tras golpear las extremidades del objetivo.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Recarga manual', type: 'Armas', description: 'Munición volátil diseñada para golpear más fuerte, pero menos estable y con posibilidad de fallar.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Asesino', type: 'Armas', description: '+15% de daño al apuntar.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Incendiario', type: 'Armas', description: 'A veces inflige daño incendiario.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Lacerante', type: 'Armas', description: 'A veces aplica sangrado al objetivo.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Hurto médico', type: 'Armas', description: 'Probabilidad de que los humanos suelten botiquines extra al morir.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Venenoso', type: 'Armas', description: 'A veces inflige veneno y ralentiza al objetivo.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Rápido', type: 'Armas', description: '+25% de velocidad de ataque.', tags: ['weapon'] },
+    { slot: 2, prefix: 'Tambaleante', type: 'Armas', description: 'Pequeña probabilidad de tambalear enemigos.', tags: ['weapon'] },
 
-    function render() {
-      const filtered = traits.filter(filterItem);
-      rows.innerHTML = filtered.map(item => `
+    { slot: 3, prefix: 'Conmocionador', type: 'Armas', description: 'Pequeña probabilidad de derribar objetivos.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Desmoralizante', type: 'Armas', description: 'Pequeña probabilidad de desmoralizar a un objetivo.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Explosivo', type: 'Armas', description: 'Cambia aleatoriamente a proyectiles explosivos.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Frenesí', type: 'Armas', description: 'Pequeña probabilidad de enloquecer a un objetivo.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Puñetazo de una pulgada', type: 'Armas', description: 'Los disparos salen con una dispersión similar a la de una escopeta.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Perforante', type: 'Armas', description: 'Atraviesa incluso las armaduras más resistentes.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Disparo doble', type: 'Armas', description: 'Cada cuarto disparo lanza dos proyectiles a la vez.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Tesla', type: 'Armas', description: 'A veces los disparos emiten electricidad al impactar, dañando y ralentizando a enemigos cercanos.', tags: ['weapon'] },
+    { slot: 3, prefix: 'Construcción de titanio', type: 'Armas', description: 'Materiales premium hacen que esta arma sea muy ligera.', tags: ['weapon'] }
+  ];
+
+  const rows = document.getElementById('rows');
+  const categoryButtons = document.querySelectorAll('.btn[data-filter]');
+  const slotButtons = document.querySelectorAll('.btn[data-slot]');
+  const search = document.getElementById('search');
+
+  let activeCategory = 'all';
+  let activeSlot = 'all';
+  let query = '';
+
+  function filterItem(item) {
+    const byCategory = activeCategory === 'all' ? true : item.tags.includes(activeCategory);
+    const bySlot = activeSlot === 'all' ? true : item.slot === Number(activeSlot);
+    const haystack = `${item.prefix} ${item.type} ${item.description}`.toLowerCase();
+    const bySearch = haystack.includes(query.toLowerCase());
+
+    return byCategory && bySlot && bySearch;
+  }
+
+  function render() {
+    const filtered = traits.filter(filterItem);
+
+    rows.innerHTML = filtered.map(item => `
+      <tr>
+        <td class="slot">${item.slot}</td>
+        <td class="prefix">${item.prefix}</td>
+        <td class="type">${item.type}</td>
+        <td>${item.description}</td>
+      </tr>
+    `).join('');
+
+    if (!filtered.length) {
+      rows.innerHTML = `
         <tr>
-          <td class="slot">${item.slot}</td>
-          <td class="prefix">${item.prefix}</td>
-          <td class="type">${item.type}</td>
-          <td>${item.description}</td>
+          <td colspan="4" style="padding:22px;color:#c7d1dc;">
+            No se encontraron resultados.
+          </td>
         </tr>
-      `).join('');
-
-      if (!filtered.length) {
-        rows.innerHTML = `<tr><td colspan="5" style="padding:22px;color:#c7d1dc;">No se encontraron resultados.</td></tr>`;
-      }
+      `;
     }
+  }
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        active = btn.dataset.filter;
-        render();
-      });
-    });
-
-    search.addEventListener('input', e => {
-      query = e.target.value;
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = btn.dataset.filter;
       render();
     });
+  });
 
+  slotButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      slotButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSlot = btn.dataset.slot;
+      render();
+    });
+  });
+
+  search.addEventListener('input', e => {
+    query = e.target.value;
     render();
-  </script>
+  });
+
+  render();
+</script>
 </body>
 </html>
