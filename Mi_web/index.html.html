@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperHarold | Starfield</title>
+  <style>
+    :root {
+      --bg: #07090d;
+      --bg-2: #0f131a;
+      --panel: #151b24;
+      --panel-2: #1b2430;
+      --line: #273142;
+      --text: #e8edf4;
+      --muted: #9fb0c0;
+      --cyan: #1db8ff;
+      --pink: #ff0a9a;
+      --lime: #b5d216;
+      --soft-white: #f2f4f7;
+      --header: #526673;
+      --glow: rgba(29,184,255,.18);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top center, rgba(255,10,154,.10), transparent 22%),
+        radial-gradient(circle at left top, rgba(29,184,255,.10), transparent 25%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+    }
+
+    .page {
+      width: min(1300px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .avatar {
+      width: 74px;
+      height: 74px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--pink);
+      box-shadow: 0 0 0 3px rgba(29,184,255,.15);
+      background: #111;
+      flex: 0 0 auto;
+    }
+
+    .logo {
+      max-width: min(560px, 62vw);
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 18px rgba(255,10,154,.10));
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      background: linear-gradient(135deg, #18202a 0%, #10151c 100%);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      margin-bottom: 18px;
+    }
+
+    .hero-copy {
+      padding: 26px 24px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 40px;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: #d6deea;
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    .hero strong {
+      color: var(--lime);
+    }
+
+    .hero-art {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      background:
+        radial-gradient(circle at center, rgba(181,210,22,.25), transparent 40%),
+        linear-gradient(135deg, rgba(29,184,255,.10), rgba(255,10,154,.08));
+      border-left: 1px solid var(--line);
+    }
+
+    .hero-art img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid rgba(255,10,154,.35);
+      box-shadow: 0 0 30px rgba(29,184,255,.16);
+      background: #0f1116;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+    }
+
+    .toolbar-label {
+      color: #dae3ec;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
+    .btn {
+      background: linear-gradient(180deg, #2a3440, #1c2530);
+      border: 1px solid #3a4a5c;
+      color: #dbe6f2;
+      padding: 10px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: .18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(0,0,0,.18);
+    }
+
+    .btn.active {
+      background: linear-gradient(180deg, #b5d216, #8fb80f);
+      border-color: #b5d216;
+      color: #0f1419;
+      box-shadow: 0 0 10px rgba(181,210,22,0.6);
+    }
+
+    .search {
+      margin-left: auto;
+      min-width: 240px;
+      max-width: 320px;
+      width: 100%;
+      padding: 11px 12px;
+      border-radius: 4px;
+      border: 1px solid #3e4d60;
+      background: #0d1218;
+      color: var(--text);
+      outline: none;
+    }
+
+    .search:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px var(--glow);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 930px;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: linear-gradient(180deg, #627683, #556874);
+      color: #f7fafc;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      font-size: 13px;
+    }
+
+    th, td {
+      padding: 14px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background: rgba(29,184,255,.05);
+    }
+
+    td.slot {
+      width: 72px;
+      color: #ffdca0;
+      font-weight: bold;
+    }
+
+    td.prefix {
+      color: #d5dee8;
+    }
+
+    td.type {
+      color: var(--muted);
+    }
+
+    .side-title {
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin: 0 0 10px;
+    }
+
+    .side-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .side-link {
+      display: block;
+      padding: 20px 14px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #27313b;
+      background: linear-gradient(180deg, #f1f3f2, #d0d5d1);
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 4px;
+      font-weight: bold;
+      transition: .18s ease;
+    }
+
+    .side-link:hover {
+      background: linear-gradient(180deg, #ffffff, #e3e7e4);
+      transform: translateY(-1px);
+    }
+
+    .social {
+      margin-top: 14px;
+      text-align: center;
+      padding: 16px;
+      background: linear-gradient(180deg, #141b24, #10161d);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: #d7e0ea;
+    }
+
+    .social strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .social a {
+      display: block;
+      margin: 8px 0;
+      padding: 12px;
+      background: linear-gradient(180deg, #1b2430, #121820);
+      border: 1px solid #2e3a48;
+      border-radius: 6px;
+      color: #b5d216;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .social a:hover {
+      background: linear-gradient(180deg, #b5d216, #8fb80f);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 14px 0 0;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .footer {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 1100px) {
+      .layout { grid-template-columns: 1fr; }
+      .tagline { display: none; }
+    }
+
+    @media (max-width: 760px) {
+      .page { width: min(100% - 20px, 1300px); }
+      .topbar { align-items: flex-start; }
+      .brand { align-items: flex-start; }
+      .avatar { width: 58px; height: 58px; }
+      .logo { max-width: 100%; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-art { border-left: 0; border-top: 1px solid var(--line); }
+      .hero h1 { font-size: 30px; }
+      .search { min-width: 100%; margin-left: 0; }
+      .mini-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="brand">
+        <img class="avatar" src="avatar.png" alt="Avatar"">
+        <img class="logo" src="Logo_fuente.png" alt="Logo">
+      </div>
+    </div>
+
+    <div class="layout">
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <h1>Modificadores legendarios</h1>
+            <p>
+              Listado con los <strong>efectos legendarios</strong> de equipo para <strong>Starfield</strong>, armas,
+              armaduras, cascos y mochilas.
+            </p>
+            <div>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="avatar.png" alt="Logo">
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="toolbar">
+            <span class="toolbar-label">Filtro</span>
+            <button class="btn active" data-filter="all">Todo</button>
+            <button class="btn" data-filter="spacesuit">Traje</button>
+            <button class="btn" data-filter="helmet">Casco</button>
+            <button class="btn" data-filter="pack">Mochila</button>
+            <input id="search" class="search" type="text" placeholder="Buscar rasgo, tipo o descripción...">
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Slot</th>
+                  <th>Prefijo</th>
+                  <th>Tipo</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="footer">
+          Archivo editable y listo para convertir en versión final con tus logos reales.
+        </div>
+      </main>
+
+      <aside>
+        <h2 class="side-title">Relacionado</h2>
+        <div class="side-links">
+          <a href="#" class="side-link">Armas</a>
+          <a href="#" class="side-link">Trajes</a>
+          <a href="#" class="side-link">Cascos</a>
+          <a href="#" class="side-link">Mods</a>
+        </div>
+
+        <div class="social">
+          <strong>Sígueme</strong>
+          <a href="https://www.youtube.com/@superharold" target="_blank">YouTube</a>
+          <a href="https://www.instant-gaming.com/es/?igr=superharold" target="_blank">Ofertas de juegos</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const traits = [
+      { slot: 1, prefix: 'Ablativo', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de Energía recibido.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 1, prefix: 'Antibalístico', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño Físico recibido de armas a distancia.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 2, prefix: 'Antiséptico', type: 'Traje espacial, Casco, Mochila', description: '+25 de Resistencia aérea.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 3, prefix: 'Blindado', type: 'Mochila', description: '-10% de daño Físico, Energía y EM recibido.', tags: ['pack'] },
+      { slot: 3, prefix: 'Carga asistida', type: 'Mochila', description: 'Consume un 75% menos de O2 al correr con sobrepeso.', tags: ['pack'] },
+      { slot: 1, prefix: 'Cazador de bestias', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos alienígenas.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 1, prefix: 'Reforzado', type: 'Traje espacial, Casco, Mochila', description: 'Otorga hasta +100 de resistencia a Energía y Física cuanto menor sea tu salud.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 1, prefix: 'Camaleón', type: 'Traje espacial, Casco, Mochila', description: 'Te camuflas con el entorno al ir en sigilo y permanecer inmóvil.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 1, prefix: 'Veterano de combate', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos humanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 2, prefix: 'Ajustado', type: 'Mochila', description: '+20 a la capacidad de carga.', tags: ['pack'] },
+      { slot: 2, prefix: 'Galvanizado', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia corrosiva.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 3, prefix: 'Incendiario', type: 'Traje espacial, Casco, Mochila', description: '10% de probabilidad de incendiar a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 2, prefix: 'Revestido de plomo', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia a la radiación.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 2, prefix: 'Refrigeración líquida', type: 'Traje espacial, Casco, Mochila', description: '+25 de resistencia térmica.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 3, prefix: 'Espejado', type: 'Traje espacial, Casco, Mochila', description: '4% de probabilidad de reflejar ataques.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 1, prefix: 'O2 mejorado', type: 'Casco, Mochila', description: '+20% de capacidad de oxígeno.', tags: ['helmet', 'pack'] },
+      { slot: 1, prefix: 'Filtro de O2', type: 'Casco, Mochila', description: '-25% de consumo de oxígeno.', tags: ['helmet', 'pack'] },
+      { slot: 3, prefix: 'Pacificador', type: 'Traje espacial, Casco, Mochila', description: 'Los rifles hacen un 10% más de daño.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 3, prefix: 'Reactivo', type: 'Traje espacial, Casco, Mochila', description: '10% de probabilidad de tambalear a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 3, prefix: 'Repulsor', type: 'Traje espacial, Casco, Mochila', description: '5% de probabilidad de desarmar a atacantes cercanos.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 2, prefix: 'Transportista de recursos', type: 'Traje espacial, Casco, Mochila', description: 'Los recursos pesan un 25% menos.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 1, prefix: 'Robusto', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño cuerpo a cuerpo recibido.', tags: ['spacesuit', 'helmet', 'pack'] },
+      { slot: 1, prefix: 'Técnico', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de enemigos robóticos.', tags: ['spacesuit', 'helmet', 'pack'] }
+    ];
+
+    const rows = document.getElementById('rows');
+    const buttons = document.querySelectorAll('.btn');
+    const search = document.getElementById('search');
+    let active = 'all';
+    let query = '';
+
+    function filterItem(item) {
+      const byType = active === 'all' ? true : item.tags.includes(active);
+      const haystack = `${item.trait} ${item.prefix} ${item.type} ${item.description}`.toLowerCase();
+      const bySearch = haystack.includes(query.toLowerCase());
+      return byType && bySearch;
+    }
+
+    function render() {
+      const filtered = traits.filter(filterItem);
+      rows.innerHTML = filtered.map(item => `
+        <tr>
+          <td class="slot">${item.slot}</td>
+          <td class="prefix">${item.prefix}</td>
+          <td class="type">${item.type}</td>
+          <td>${item.description}</td>
+        </tr>
+      `).join('');
+
+      if (!filtered.length) {
+        rows.innerHTML = `<tr><td colspan="5" style="padding:22px;color:#c7d1dc;">No se encontraron resultados.</td></tr>`;
+      }
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        active = btn.dataset.filter;
+        render();
+      });
+    });
+
+    search.addEventListener('input', e => {
+      query = e.target.value;
+      render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
