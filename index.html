@@ -46,7 +46,6 @@
   display: flex;
   flex-direction: column;
 }
-
     .topbar {
       display: flex;
       align-items: center;
@@ -544,6 +543,7 @@
       <button class="btn slot-btn" data-slot="1">Slot 1</button>
       <button class="btn slot-btn" data-slot="2">Slot 2</button>
       <button class="btn slot-btn" data-slot="3">Slot 3</button>
+      <button class="btn slot-btn" data-slot="4">Slot 4</button>
     </div>
   </div>
 
@@ -589,7 +589,7 @@
     </div>
   </div>
 
- <script>
+<script>
   const traits = [
     { slot: 1, prefix: 'Ablativo', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño de Energía recibido.', tags: ['spacesuit', 'helmet', 'pack'] },
     { slot: 1, prefix: 'Antibalístico', type: 'Traje espacial, Casco, Mochila', description: '-15% de daño Físico recibido de armas a distancia.', tags: ['spacesuit', 'helmet', 'pack'] },
@@ -645,7 +645,11 @@
     { slot: 3, prefix: 'Perforante', type: 'Armas', description: 'Atraviesa incluso las armaduras más resistentes.', tags: ['weapon'] },
     { slot: 3, prefix: 'Disparo doble', type: 'Armas', description: 'Cada cuarto disparo lanza dos proyectiles a la vez.', tags: ['weapon'] },
     { slot: 3, prefix: 'Tesla', type: 'Armas', description: 'A veces los disparos emiten electricidad al impactar, dañando y ralentizando a enemigos cercanos.', tags: ['weapon'] },
-    { slot: 3, prefix: 'Construcción de titanio', type: 'Armas', description: 'Materiales premium hacen que esta arma sea muy ligera.', tags: ['weapon'] }
+    { slot: 3, prefix: 'Construcción de titanio', type: 'Armas', description: 'Materiales premium hacen que esta arma sea muy ligera.', tags: ['weapon'] },
+
+    { slot: 4, prefix: 'Saboteador', type: 'Armas', description: 'Probabilidad de matar robots instantáneamente. (Tier 4 - Preview)', tags: ['weapon'] },
+    { slot: 4, prefix: 'Imprudente', type: 'Armas', description: '+500% daño, cargador de 1 y -50% de vida. (Tier 4 - Preview)', tags: ['weapon'] },
+    { slot: 4, prefix: 'Enigmático', type: 'Traje espacial', description: 'Genera clones holográficos que confunden enemigos. (Tier 4 - Preview)', tags: ['spacesuit'] }
   ];
 
   const rows = document.getElementById('rows');
