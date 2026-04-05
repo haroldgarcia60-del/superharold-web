@@ -37,11 +37,15 @@
         linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
     }
 
-    .page {
-      width: min(1300px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 24px 0 40px;
-    }
+   .page {
+  width: min(1300px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
     .topbar {
       display: flex;
