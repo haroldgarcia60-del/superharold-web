@@ -2,9 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
 import {PortableText, type PortableTextComponents} from '@portabletext/react'
+import type {Metadata} from 'next'
 import ImageGallery from '@/components/ImageGallery'
 import {client} from '@/sanity/lib/client'
 import {urlFor} from '@/sanity/lib/image'
+
+type ContentType = 'news' | 'guide' | 'build' | 'datamine'
 
 type PortableTextBlock = {
   _key: string
@@ -34,8 +37,6 @@ type ContentArticle = {
     alt?: string
   }
 }
-
-type ContentType = 'news' | 'guide' | 'build' | 'datamine'
 
 type PageProps = {
   params: Promise<{
@@ -216,13 +217,103 @@ const portableTextComponents: PortableTextComponents = {
   },
 }
 
-export default async function OtherGameArticlePage({params}: PageProps) {
+/* METADATA PARA SEO Y REDES SOCIALES */
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const {game, section, slug} = await params
 
   const sectionInfo = sectionConfig[section]
 
-  // Si alguien intenta entrar en una sección que no existe,
-  // devolvemos 404.
+  if (!sectionInfo) {
+    return {}
+  }
+
+  const article = await client.fetch<ContentArticle | null>(
+    `*[
+      _type == $contentType &&
+      slug.current == $slug &&
+      game->slug.current == $game
+    ][0] {
+      title,
+      summary,
+      publishedAt,
+      coverImage,
+      game->{
+        name,
+        slug
+      }
+    }`,
+    {
+      contentType: sectionInfo.type,
+      slug,
+      game,
+    },
+  )
+
+  if (!article) {
+    return {}
+  }
+
+  const description =
+    article.summary ||
+    `${article.title} — ${article.game.name} | SuperHarOld`
+
+  const imageUrl = article.coverImage
+    ? urlFor(article.coverImage)
+        .width(1200)
+        .height(630)
+        .fit('crop')
+        .url()
+    : undefined
+
+  return {
+    title: article.title,
+    description,
+
+    openGraph: {
+      title: article.title,
+      description,
+      type: 'article',
+      siteName: 'SuperHarOld',
+      locale: 'es_ES',
+
+      ...(imageUrl
+        ? {
+            images: [
+              {
+                url: imageUrl,
+                width: 1200,
+                height: 630,
+                alt: article.coverImage?.alt || article.title,
+              },
+            ],
+          }
+        : {}),
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: article.title,
+      description,
+
+      ...(imageUrl
+        ? {
+            images: [imageUrl],
+          }
+        : {}),
+    },
+  }
+}
+
+export default async function OtherGameArticlePage({
+  params,
+}: PageProps) {
+  const {game, section, slug} = await params
+
+  const sectionInfo = sectionConfig[section]
+
   if (!sectionInfo) {
     notFound()
   }
@@ -260,7 +351,9 @@ export default async function OtherGameArticlePage({params}: PageProps) {
   return (
     <main>
       <article className="mx-auto max-w-5xl px-6 py-12 md:py-16">
+
         {/* VOLVER */}
+
         <Link
           href={`/otros-juegos?game=${encodeURIComponent(game)}`}
           className="text-sm font-bold text-primary transition hover:text-primary-pressed"
@@ -269,6 +362,7 @@ export default async function OtherGameArticlePage({params}: PageProps) {
         </Link>
 
         {/* CABECERA */}
+
         <header className="mt-8">
           <p className="font-bold uppercase tracking-widest text-secondary">
             {article.game.name} · {sectionInfo.label}
@@ -294,6 +388,7 @@ export default async function OtherGameArticlePage({params}: PageProps) {
         </header>
 
         {/* CONTENIDO */}
+
         {article.content && article.content.length > 0 && (
           <section className="mt-10 rounded-2xl border border-surface-light bg-surface p-6 md:p-10">
             <PortableText
@@ -304,6 +399,7 @@ export default async function OtherGameArticlePage({params}: PageProps) {
         )}
 
         {/* YOUTUBE */}
+
         {article.youtubeUrl && (
           <div className="mt-8">
             <a
@@ -316,6 +412,7 @@ export default async function OtherGameArticlePage({params}: PageProps) {
             </a>
           </div>
         )}
+
       </article>
     </main>
   )
