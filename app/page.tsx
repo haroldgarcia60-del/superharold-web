@@ -4,6 +4,8 @@ import ContentCard from '@/components/ContentCard'
 import {client} from '@/sanity/lib/client'
 import {urlFor} from '@/sanity/lib/image'
 
+export const revalidate = 60
+
 type Game = {
   _id: string
   name: string
