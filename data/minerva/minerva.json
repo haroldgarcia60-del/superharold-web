@@ -1,0 +1,3457 @@
+{
+  "generatedAt": "2026-09-05T07:18:58.198Z",
+  "source": {
+    "project": "SH76 Companion",
+    "file": "lib/data/minerva_data.dart"
+  },
+  "stats": {
+    "plans": 172,
+    "saleLists": 24,
+    "bigSales": 6
+  },
+  "plans": [
+    {
+      "formId": "005527DB",
+      "name": "Plano: brazo izquierdo de armadura con púas",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_ArmLeft_Set_V94_Bleed_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "puas.webp"
+    },
+    {
+      "formId": "005527DC",
+      "name": "Plano: brazo izquierdo de armadura solar",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_ArmLeft_Set_V94_Solar_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        11
+      ],
+      "image": "solar.webp"
+    },
+    {
+      "formId": "005527DD",
+      "name": "Plano: pierna izquierda de armadura con púas",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_LegLeft_Set_V94_Bleed_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "puas.webp"
+    },
+    {
+      "formId": "005527DE",
+      "name": "Plano: pierna izquierda de armadura solar",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_LegLeft_Set_V94_Solar_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        11
+      ],
+      "image": "solar.webp"
+    },
+    {
+      "formId": "005527DF",
+      "name": "Plano: coraza de armadura con púas",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_Torso_Set_V94_Bleed_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "puas.webp"
+    },
+    {
+      "formId": "005527E0",
+      "name": "Plano: coraza de armadura solar",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_Torso_Set_V94_Solar_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        11
+      ],
+      "image": "solar.webp"
+    },
+    {
+      "formId": "005535F9",
+      "name": "Plano: brazo izquierdo de corazón de enredadera",
+      "editorId": "Recipe_Armor_PowerArmor_Ultracite_Set_V94_ArmLeft_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "enredadera.webp"
+    },
+    {
+      "formId": "005535FA",
+      "name": "Plano: pierna izquierda de corazón de enredadera",
+      "editorId": "Recipe_Armor_PowerArmor_Ultracite_Set_V94_LegLeft_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "enredadera.webp"
+    },
+    {
+      "formId": "005535FB",
+      "name": "Plano: coraza de corazón de enredadera",
+      "editorId": "Recipe_Armor_PowerArmor_Ultracite_Set_V94_Torso_GoldVendor",
+      "price": 938,
+      "basePrice": 1250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_10",
+      "tierFormId": "005A504D",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "enredadera.webp"
+    },
+    {
+      "formId": "00553BEA",
+      "name": "Plano: casco de corazón de enredadera",
+      "editorId": "Recipe_Armor_PowerArmor_Ultracite_Set_V94_Helmet_GoldVendor",
+      "price": 1238,
+      "basePrice": 1650,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_11",
+      "tierFormId": "005A504E",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "enredadera.webp"
+    },
+    {
+      "formId": "00553BEB",
+      "name": "Plano: brazo derecho de corazón de enredadera",
+      "editorId": "Recipe_Armor_PowerArmor_Ultracite_Set_V94_ArmRight_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "enredadera.webp"
+    },
+    {
+      "formId": "00553BEC",
+      "name": "Plano: pierna derecha de corazón de enredadera",
+      "editorId": "Recipe_Armor_PowerArmor_Ultracite_Set_V94_LegRight_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "enredadera.webp"
+    },
+    {
+      "formId": "00554651",
+      "name": "Plano: brazo derecho de armadura con púas",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_ArmRight_Set_V94_Bleed_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "puas.webp"
+    },
+    {
+      "formId": "00554652",
+      "name": "Plano: brazo derecho de armadura solar",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_ArmRight_Set_V94_Solar_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        11
+      ],
+      "image": "solar.webp"
+    },
+    {
+      "formId": "00554653",
+      "name": "Plano: pierna derecha de armadura con púas",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_LegRight_Set_V94_Bleed_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "puas.webp"
+    },
+    {
+      "formId": "00554654",
+      "name": "Plano: pierna derecha de armadura solar",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_LegRight_Set_V94_Solar_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        11
+      ],
+      "image": "solar.webp"
+    },
+    {
+      "formId": "00589353",
+      "name": "Plano: brazo izquierdo de T-65",
+      "editorId": "W05_Recipe_Armor_PowerArmor_T65_ArmLeft_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        9
+      ],
+      "image": "t-65.webp"
+    },
+    {
+      "formId": "00589354",
+      "name": "Plano: brazo derecho de T-65",
+      "editorId": "W05_Recipe_Armor_PowerArmor_T65_ArmRight_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        9
+      ],
+      "image": "t-65.webp"
+    },
+    {
+      "formId": "00589355",
+      "name": "Plano: casco de T-65",
+      "editorId": "W05_Recipe_Armor_PowerArmor_T65_Helmet_GoldVendor",
+      "price": 1238,
+      "basePrice": 1650,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_11",
+      "tierFormId": "005A504E",
+      "normalLists": [
+        9
+      ],
+      "image": "t-65.webp"
+    },
+    {
+      "formId": "00589356",
+      "name": "Plano: pierna izquierda de T-65",
+      "editorId": "W05_Recipe_Armor_PowerArmor_T65_LegLeft_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        9
+      ],
+      "image": "t-65.webp"
+    },
+    {
+      "formId": "00589357",
+      "name": "Plano: pierna derecha de T-65",
+      "editorId": "W05_Recipe_Armor_PowerArmor_T65_LegRight_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        9
+      ],
+      "image": "t-65.webp"
+    },
+    {
+      "formId": "00589358",
+      "name": "Plano: Plano: coraza de T-65",
+      "editorId": "W05_Recipe_Armor_PowerArmor_T65_Torso_GoldVendor",
+      "price": 938,
+      "basePrice": 1250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_10",
+      "tierFormId": "005A504D",
+      "normalLists": [
+        9
+      ],
+      "image": "t-65.webp"
+    },
+    {
+      "formId": "0058935B",
+      "name": "Plano: coraza del servicio secreto",
+      "editorId": "W05_Recipe_Armor_SecretService_Torso_GoldVendor",
+      "price": 938,
+      "basePrice": 1250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_10",
+      "tierFormId": "005A504D",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "servicio_secreto.webp"
+    },
+    {
+      "formId": "0058935E",
+      "name": "Plano: ametralladora Gauss",
+      "editorId": "W05_Recipe_Weapon_Ranged_GaussMinigun_GoldVendor_29",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        5,
+        13,
+        21,
+        23
+      ],
+      "image": "minigauss.webp"
+    },
+    {
+      "formId": "0058935F",
+      "name": "Plano: pistola Gauss",
+      "editorId": "W05_Recipe_Weapon_Ranged_GaussPistol_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "pistola_gauss.webp"
+    },
+    {
+      "formId": "00589360",
+      "name": "Plano: escopeta Gauss",
+      "editorId": "W05_Recipe_Weapon_Ranged_GaussShotgun_GoldVendor",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        7
+      ],
+      "image": "escopeta_gauss.webp"
+    },
+    {
+      "formId": "00589361",
+      "name": "Plano: lanzaplasma",
+      "editorId": "W05_Recipe_Weapon_Ranged_PlasmaCaster_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "lanza_plasma.webp"
+    },
+    {
+      "formId": "0058961B",
+      "name": "Plano: casco del servicio secreto",
+      "editorId": "W05_Recipe_Armor_SecretService_Helmet_GoldVendor",
+      "price": 1238,
+      "basePrice": 1650,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_11",
+      "tierFormId": "005A504E",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "servicio_secreto.webp"
+    },
+    {
+      "formId": "0058961C",
+      "name": "Plano: dinamita",
+      "editorId": "W05_Recipe_Tinkers_GrenadeDynamite_GoldVendor",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "dinamita.webp"
+    },
+    {
+      "formId": "0058961D",
+      "name": "Plano: cartuchos de dinamita",
+      "editorId": "W05_Recipe_Tinkers_GrenadeDynamiteBundle_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        9
+      ],
+      "image": "dinamita_bundle.webp"
+    },
+    {
+      "formId": "0058961E",
+      "name": "Plano: bengala",
+      "editorId": "W05_Recipe_Tinkers_FlareGrenade_GoldVendor",
+      "price": 38,
+      "basePrice": 50,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_01",
+      "tierFormId": "005A5044",
+      "normalLists": [
+        10
+      ],
+      "image": "bengala.webp"
+    },
+    {
+      "formId": "00589621",
+      "name": "Plano: pica para ganado",
+      "editorId": "W05_Recipe_Weapon_Melee_Cattleprod_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "pica_de_ganado.webp"
+    },
+    {
+      "formId": "00589623",
+      "name": "Plano: guantelete",
+      "editorId": "W05_Recipe_Weapon_Melee_Gauntlet_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        3,
+        10,
+        19
+      ],
+      "image": "guantelete.webp"
+    },
+    {
+      "formId": "00590FC4",
+      "name": "Plano: condensador electromagnético para lanzaplasma",
+      "editorId": "W05_recipe_mod_PlasmaCaster_Receiver_Pulse_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        9
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00591420",
+      "name": "Plano: cañón corto alineado para pistola Gauss",
+      "editorId": "W05_recipe_mod_GaussPistol_Barrel_Short_Recoil-HipAccuracy_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00591421",
+      "name": "Plano: cargador de tambor para pistola Gauss",
+      "editorId": "W05_recipe_mod_GaussPistol_Magazine_Ammo_GoldVendor",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00591422",
+      "name": "Plano: cañón con silenciador para pistola Gauss",
+      "editorId": "W05_recipe_mod_GaussPistol_Barrel_Suppressed_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        13
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00592EB5",
+      "name": "Plano: granada de flotador lanzallamas",
+      "editorId": "Recipe_Tinkers_GrenadeFloaterFlamer_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        7,
+        14
+      ],
+      "image": "granada_flotador_lanzallamas.webp"
+    },
+    {
+      "formId": "00592EB6",
+      "name": "Plano: granada de flotador congelador",
+      "editorId": "Recipe_Tinkers_GrenadeFloaterFreezer_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        11
+      ],
+      "image": "granada_flotador_congelador.webp"
+    },
+    {
+      "formId": "00592EB7",
+      "name": "Plano: granada de flotador masticador",
+      "editorId": "Recipe_Tinkers_GrenadeFloaterGnasher_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "granada_flotador_masticador.webp"
+    },
+    {
+      "formId": "00592F7B",
+      "name": "Plano: fertilizador Turbo-Fert",
+      "editorId": "W05_Recipe_Workshop_Chem_TurboFertFertilizer_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        10
+      ],
+      "image": "fertilizador_turbo_fert.webp"
+    },
+    {
+      "formId": "0059560D",
+      "name": "Plano: cañón extendido para escopeta Gauss",
+      "editorId": "W05_recipe_mod_GaussShotgun_Barrel_Extended_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        7
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00595610",
+      "name": "Plano: armazón endurecido para escopeta Gauss",
+      "editorId": "W05_recipe_mod_GaussShotgun_Receiver_Damage_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        7
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00595611",
+      "name": "Plano: armazón despiadado para escopeta Gauss",
+      "editorId": "W05_recipe_mod_GaussShotgun_receiver_CritDMG-HipAccuracy_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        10
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00595612",
+      "name": "Plano: armazón refinado para escopeta Gauss",
+      "editorId": "W05_recipe_mod_GaussShotgun_Receiver_Damage-HipAccuracy_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        10
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00595615",
+      "name": "Plano: culata precisa para escopeta Gauss",
+      "editorId": "W05_recipe_mod_GaussShotgun_Grip_HipAccuracy-SecondaryDMG_GoldVendor",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        10
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00595616",
+      "name": "Plano: cargador ampliado para escopeta Gauss",
+      "editorId": "W05_recipe_mod_GaussShotgun_Magazine_Extended_GoldVendor",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        7
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00595857",
+      "name": "Plano: casco de sigilo chino",
+      "editorId": "W05_Recipe_Headwear_ChineseStealthArmor_GoldVendor",
+      "price": 1238,
+      "basePrice": 1650,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_11",
+      "tierFormId": "005A504E",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "china.webp"
+    },
+    {
+      "formId": "00595858",
+      "name": "Plano: armadura de sigilo china",
+      "editorId": "W05_Recipe_Armor_ChineseStealthArmor_GoldVendor",
+      "price": 3000,
+      "basePrice": 4000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_13",
+      "tierFormId": "005A5050",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "china.webp"
+    },
+    {
+      "formId": "00599BD5",
+      "name": "Plano: mira de artillero para ametralladora Gauss",
+      "editorId": "W05_recipe_mod_GaussMiniGun_SCOPE_SightReflex_GoldVendor",
+      "price": 38,
+      "basePrice": 50,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_01",
+      "tierFormId": "005A5044",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00599BD6",
+      "name": "Plano: cañón triple para ametralladora Gauss",
+      "editorId": "W05_recipe_mod_GaussMiniGun_Barrel_Triple_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        10
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00599BD9",
+      "name": "Plano: condensador Tesla para ametralladora Gauss",
+      "editorId": "W05_recipe_mod_GaussMiniGun_Tesla_Capacitor_GoldVendor",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "00599BDA",
+      "name": "Plano: dinamo Tesla para ametralladora Gauss",
+      "editorId": "W05_recipe_mod_GaussMiniGun_Tesla_Dynamo_GoldVendor",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "0059D542",
+      "name": "Plano: armadura interior del servicio secreto",
+      "editorId": "W05_Recipe_Armor_Underarmor_SecretService_Uniform_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "armadura_interior.webp"
+    },
+    {
+      "formId": "0059D543",
+      "name": "Plano: brazo izquierdo del servicio secreto",
+      "editorId": "W05_Recipe_Armor_SecretService_ArmLeft_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "servicio_secreto.webp"
+    },
+    {
+      "formId": "0059D544",
+      "name": "Plano: brazo derecho del servicio secreto",
+      "editorId": "W05_Recipe_Armor_SecretService_ArmRight_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "servicio_secreto.webp"
+    },
+    {
+      "formId": "0059D545",
+      "name": "Plano: pierna izquierda del servicio secreto",
+      "editorId": "W05_Recipe_Armor_SecretService_LegLeft_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "servicio_secreto.webp"
+    },
+    {
+      "formId": "0059D546",
+      "name": "Plano: pierna derecha del servicio secreto",
+      "editorId": "W05_Recipe_Armor_SecretService_LegRight_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "servicio_secreto.webp"
+    },
+    {
+      "formId": "0059F457",
+      "name": "Plano: cañón de francotirador para rifle de plasma",
+      "editorId": "W05_recipe_mod_PlasmaCaster_Barrel_Sniper_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        9
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "0059F458",
+      "name": "Plano: cañón de antena para rifle de plasma",
+      "editorId": "W05_recipe_mod_PlasmaCaster_Barrel_Dish_GoldVendor",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        11
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A0ED1",
+      "name": "Plano: módulo de mochila de tendero",
+      "editorId": "W05_Recipe_mod_BackPack_Effect_Relief_GoldVendor",
+      "price": 263,
+      "basePrice": 350,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_06",
+      "tierFormId": "005A5049",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A0ED3",
+      "name": "Plano: pozo de agua",
+      "editorId": "W05_Recipe_workshop_CAMP_Utility_WaterWell_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        6,
+        14,
+        22
+      ],
+      "image": "pozo_de_agua.webp"
+    },
+    {
+      "formId": "005A0ED4",
+      "name": "Plano: módulo de mochila de químico",
+      "editorId": "W05_Recipe_mod_BackPack_Effect_Pillager_GoldVendor",
+      "price": 263,
+      "basePrice": 350,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_06",
+      "tierFormId": "005A5049",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A1007",
+      "name": "Plano: parcelas de tierra cultivable",
+      "editorId": "W05_Recipe_workshop_CAMP_Floor_DirtTile_GoldVendor",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "tierra_cultibable.webp"
+    },
+    {
+      "formId": "005A158B",
+      "name": "Plano: blindaje con almacenaje del servicio secreto para el torso",
+      "editorId": "W05_Recipe_mod_armor_SecretService_Lining_Torso_ImprovedCarryCapacity_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A1595",
+      "name": "Plano: blindaje del servicio secreto con propulsores",
+      "editorId": "W05_Recipe_mod_armor_SecretService_Torso_Jetpack_GoldVendor",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_12",
+      "tierFormId": "005A504F",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A16BA",
+      "name": "Plano: puño americano oxidado de T-65",
+      "editorId": "W05_Recipe_mod_Armor_PowerArmor_T65_Arm_Misc_Bleed_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A16BE",
+      "name": "Plano: amortiguadores calibrados de T-65",
+      "editorId": "W05_Recipe_mod_Armor_PowerArmor_T65_Leg_Misc_Carry_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A16C1",
+      "name": "Plano: servos acelerados de T-65",
+      "editorId": "W05_Recipe_mod_Armor_PowerArmor_T65_Leg_Misc_SprintBoost_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A16C5",
+      "name": "Plano: propulsores de T-65",
+      "editorId": "W05_Recipe_mod_Armor_PowerArmor_T65_Torso_Misc_Jetpack_GoldVendor",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_12",
+      "tierFormId": "005A504F",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A16C7",
+      "name": "Plano: bomba médica de T-65",
+      "editorId": "W05_Recipe_mod_Armor_PowerArmor_T65_Torso_Misc_MedicPump_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A16C9",
+      "name": "Plano: Stealth Boy de T-65",
+      "editorId": "W05_Recipe_mod_Armor_PowerArmor_T65_Torso_Misc_StealthBoy_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A2441",
+      "name": "Plano: armazón despiadado de pistola Gauss",
+      "editorId": "W05_recipe_mod_GaussPistol_receiver_CritDMG-HipAccuracy_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        13
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A2442",
+      "name": "Plano: armazón endurecido de pistola Gauss",
+      "editorId": "W05_recipe_mod_GaussPistol_Receiver_Damage_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        13
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A2443",
+      "name": "Plano: armazón refinado de pistola Gauss",
+      "editorId": "W05_recipe_mod_GaussPistol_Receiver_Damage-HipAccuracy_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A255E",
+      "name": "Plano: condensador calibrado para lanzaplasma",
+      "editorId": "W05_recipe_mod_PlasmaCaster_Receiver_CritDMG_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        9
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005A2560",
+      "name": "Plano: condensador auténtico para lanzaplasma",
+      "editorId": "W05_recipe_mod_PlasmaCaster_Receiver_HipAccuracy_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        11
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005C5E1E",
+      "name": "Plano: armadura interior del servicio secreto con revestimiento protector",
+      "editorId": "recipe_mod_armor_UnderArmor_SecretService_Mk4",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005C5E1F",
+      "name": "Plano: armadura interior del servicio secreto con revestimiento blindado",
+      "editorId": "recipe_mod_armor_UnderArmor_SecretService_Mk5",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        5,
+        21
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005C5E20",
+      "name": "Plano: armadura interior del servicio secreto con revestimiento resistente",
+      "editorId": "recipe_mod_armor_UnderArmor_SecretService_Mk3",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005C5E21",
+      "name": "Plano: armadura interior del servicio secreto con revestimiento tratado",
+      "editorId": "recipe_mod_armor_UnderArmor_SecretService_Mk2",
+      "price": 38,
+      "basePrice": 50,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_01",
+      "tierFormId": "005A5044",
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005CBEC6",
+      "name": "Plano: blindaje con almacenaje del servicio secreto para extremidad",
+      "editorId": "W05_Recipe_mod_armor_SecretService_Lining_Limb_ImprovedCarryCapacity_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005D0F04",
+      "name": "Plano: la destripadora",
+      "editorId": "Recipe_Weapon_Melee_AssaultronBlade_TheGutter",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "destripadora.webp"
+    },
+    {
+      "formId": "005D0F05",
+      "name": "Plano: guja de guerra",
+      "editorId": "Recipe_Weapon_Melee_WarGlaive",
+      "price": 2000,
+      "basePrice": 2667,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        1,
+        14,
+        17
+      ],
+      "image": "guja_de_guerra.webp"
+    },
+    {
+      "formId": "005D0F06",
+      "name": "Plano: Silbido en la oscuridad",
+      "editorId": "Recipe_Weapon_Ranged_AssaultRifle_WhistleInTheDark",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "silbido_en_la_oscuridad.webp"
+    },
+    {
+      "formId": "005D0F0A",
+      "name": "Plano: bombillas con jaula",
+      "editorId": "Recipe_Workshop_Lights_CagedBulbLights",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        13
+      ],
+      "image": "bombillas_con_jaula.webp"
+    },
+    {
+      "formId": "005D0F0C",
+      "name": "Plano: máquina sintomática",
+      "editorId": "Recipe_Workshop_MiscStructures_SymptoMatic",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "maquina_sintomatica.webp"
+    },
+    {
+      "formId": "005D0F0D",
+      "name": "Plano: panel solar recuperado",
+      "editorId": "Recipe_Workshop_Power_Generator_SolarPanels",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        2,
+        18
+      ],
+      "image": "panel_solar.webp"
+    },
+    {
+      "formId": "005D0F0E",
+      "name": "Plano: superreactor",
+      "editorId": "Recipe_Workshop_Power_Generator_SuperReactor",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        1,
+        17
+      ],
+      "image": "super_reactor.webp"
+    },
+    {
+      "formId": "005D0F0F",
+      "name": "Plano: carteles de Las Madrigueras",
+      "editorId": "Recipe_Workshop_WallDecor_BurrowsSigns",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        13
+      ],
+      "image": "carteles_madrigueras.webp"
+    },
+    {
+      "formId": "005D0F10",
+      "name": "Plano: carteles de la galería de Valley",
+      "editorId": "Recipe_Workshop_WallDecor_ValleyGalleriaSigns",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        13
+      ],
+      "image": "carteles_galeria.webp"
+    },
+    {
+      "formId": "005D86E0",
+      "name": "Plano: hoja criogénica para guja de guerra",
+      "editorId": "Recipe_mod_Melee_WarGlaive_Cryo_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005D86E1",
+      "name": "Plano: hoja llameante para guja de guerra",
+      "editorId": "Recipe_mod_Melee_WarGlaive_Fire_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005D86E2",
+      "name": "Plano: hoja electrificada para guja de guerra",
+      "editorId": "Recipe_mod_Melee_WarGlaive_Shock_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005D86E3",
+      "name": "Plano: hoja de plasma para guja de guerra",
+      "editorId": "Recipe_mod_Melee_WarGlaive_Plasma_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        3,
+        19
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005DBD95",
+      "name": "Plano: extremidades de materiales ultraligeros de armadura de servicio secreto",
+      "editorId": "recipe_mod_armor_SecretService_Lining_Limb_Lighter2_GoldVendor",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005DBD96",
+      "name": "Plano: extremidades de materiales ligeros de armadura de servicio secreto",
+      "editorId": "recipe_mod_armor_SecretService_Lining_Limb_Lighter_GoldVendor",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        6,
+        22
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005DCA4E",
+      "name": "Plano: gallinero",
+      "editorId": "SCORE_Recipe_workshop_CAMP_Utility_ChickenCoop_GoldVendor",
+      "price": 563,
+      "basePrice": 750,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_08",
+      "tierFormId": "005A504B",
+      "normalLists": [
+        3
+      ],
+      "image": "gallinero.webp"
+    },
+    {
+      "formId": "005DCA4F",
+      "name": "Plano: convertidor de munición",
+      "editorId": "SCORE_Recipe_workshop_CAMP_Utility_AmmoConverter_GoldVendor",
+      "price": 938,
+      "basePrice": 1250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_10",
+      "tierFormId": "005A504D",
+      "normalLists": [
+        7
+      ],
+      "image": "corvertidor_municion.webp"
+    },
+    {
+      "formId": "005DF029",
+      "name": "Plano: brazo izquierdo de reconocimiento de la Hermandad",
+      "editorId": "Recipe_Armor_BOSInfantry_ArmLeft",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        7
+      ],
+      "image": "reconocimiento_hermandad.webp"
+    },
+    {
+      "formId": "005DF02A",
+      "name": "Plano: brazo derecho de reconocimiento de la Hermandad",
+      "editorId": "Recipe_Armor_BOSInfantry_ArmRight",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        7
+      ],
+      "image": "reconocimiento_hermandad.webp"
+    },
+    {
+      "formId": "005DF02B",
+      "name": "Plano: casco de reconocimiento de la Hermandad",
+      "editorId": "Recipe_Armor_BOSInfantry_Helmet",
+      "price": 2000,
+      "basePrice": 2667,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        7
+      ],
+      "image": "reconocimiento_hermandad.webp"
+    },
+    {
+      "formId": "005DF02C",
+      "name": "Plano: pierna izquierda de reconocimiento de la Hermandad",
+      "editorId": "Recipe_Armor_BOSInfantry_LegLeft",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        7
+      ],
+      "image": "reconocimiento_hermandad.webp"
+    },
+    {
+      "formId": "005DF02D",
+      "name": "Plano: pierna derecha de reconocimiento de la Hermandad",
+      "editorId": "Recipe_Armor_BOSInfantry_LegRight",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        7
+      ],
+      "image": "reconocimiento_hermandad.webp"
+    },
+    {
+      "formId": "005DF02E",
+      "name": "Plano: coraza de reconocimiento de la Hermandad",
+      "editorId": "Recipe_Armor_BOSInfantry_Torso",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        7
+      ],
+      "image": "reconocimiento_hermandad.webp"
+    },
+    {
+      "formId": "005DF038",
+      "name": "Plano: blindaje con almacenaje de reconocimiento de la Hermandad para extremidad",
+      "editorId": "Recipe_mod_armor_BOSInfantry_Lining_Limb_ImprovedCarryCapacity",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        10
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005DF045",
+      "name": "Plano: blindaje con almacenaje de reconocimiento de la Hermandad para el torso",
+      "editorId": "Recipe_mod_armor_BOSInfantry_Lining_Torso_ImprovedCarryCapacity",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        10
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005DF04B",
+      "name": "Plano: propulsor de reconocimiento de la Hermandad",
+      "editorId": "Recipe_mod_armor_BOSInfantry_Torso_Jetpack_GoldVendor",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_12",
+      "tierFormId": "005A504F",
+      "normalLists": [
+        13
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005E47CA",
+      "name": "Plano: carga de napalm para lanzamisiles Tormenta infernal",
+      "editorId": "recipe_mod_BOSRocketLauncher_TubeBarrel_Napalm_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        14
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005E47CB",
+      "name": "Plano: carga criogénica para lanzamisiles Tormenta infernal",
+      "editorId": "recipe_mod_BOSRocketLauncher_TubeBarrel_Cryo_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        14
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005E47CC",
+      "name": "Plano: lanzamisiles Tormenta infernal",
+      "editorId": "Recipe_Weapon_Ranged_BOSRocketLauncher",
+      "price": 2000,
+      "basePrice": 2667,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        10
+      ],
+      "image": "tormenta_infernal.webp"
+    },
+    {
+      "formId": "005E47CF",
+      "name": "Plano: carga de plasma para lanzamisiles Tormenta infernal",
+      "editorId": "recipe_mod_BOSRocketLauncher_TubeBarrel_Plasma_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        14
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005E65F5",
+      "name": "Plano: pistola Cruzado",
+      "editorId": "Recipe_Weapon_Ranged_BoSPistol_29",
+      "price": 2000,
+      "basePrice": 2667,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        9,
+        23
+      ],
+      "image": "pistola_cruzado.webp"
+    },
+    {
+      "formId": "005E65FA",
+      "name": "Plano: armazón para pistola de fusión Cruzado",
+      "editorId": "Recipe_mod_BoSPistol_Receiver_Fusion_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        15
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005E65FB",
+      "name": "Plano: armazón para pistola pirotécnica Cruzado",
+      "editorId": "Recipe_mod_BoSPistol_Receiver_Pyro_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        15
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005E65FC",
+      "name": "Plano: armazón para pistola criogénica Cruzado",
+      "editorId": "Recipe_mod_BoSPistol_Receiver_Cryo_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        15
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005ECB83",
+      "name": "Plano: cortador de plasma",
+      "editorId": "Recipe_Weapon_Melee_PlasmaSword",
+      "price": 2000,
+      "basePrice": 2667,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        13
+      ],
+      "image": "cortador_plasma.webp"
+    },
+    {
+      "formId": "005ECB84",
+      "name": "Plano: hoja criogénica de cortador de plasma",
+      "editorId": "Recipe_mod_Melee_PlasmaSword_Cryo_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        11
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005ECB85",
+      "name": "Plano: hoja llameante de cortador de plasma",
+      "editorId": "Recipe_mod_Melee_PlasmaSword_Fire_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        11
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005ECB86",
+      "name": "Plano: hoja electrificada de cortador de plasma",
+      "editorId": "Recipe_mod_Melee_PlasmaSword_Shock_GoldVendor",
+      "price": 150,
+      "basePrice": 200,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_04",
+      "tierFormId": "005A5047",
+      "normalLists": [
+        11
+      ],
+      "image": "mods.webp"
+    },
+    {
+      "formId": "005ECBD3",
+      "name": "Plano: luz de manicomio",
+      "editorId": "Recipe_Workshop_Lights_AsylumLight",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        9
+      ],
+      "image": "luz_manicomio.webp"
+    },
+    {
+      "formId": "005EDA6D",
+      "name": "Plano: letrero de neón de Negocio abierto",
+      "editorId": "Recipe_Workshop_Lights_NeonSignOpen",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "negocio_abierto.webp"
+    },
+    {
+      "formId": "005EDA6E",
+      "name": "Plano: caja de alijo de bolsa de carne",
+      "editorId": "Recipe_Workshop_Container_StashBox_MeatBag_Floor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        9,
+        23
+      ],
+      "image": "bolsa_carne.webp"
+    },
+    {
+      "formId": "005EDA6F",
+      "name": "Plano: letrero de neón de saludo",
+      "editorId": "Recipe_Workshop_Lights_NeonSignHello",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        13
+      ],
+      "image": "neon_saludo.webp"
+    },
+    {
+      "formId": "005EDA70",
+      "name": "Plano: letreros del vertedero de Emmett Mountain",
+      "editorId": "Recipe_Workshop_WallDecor_EmmetMountainSigns",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        13
+      ],
+      "image": "emmett.webp"
+    },
+    {
+      "formId": "005EE14F",
+      "name": "Plano: tubo de supermutantes",
+      "editorId": "Recipe_Workshop_SuperMutantTube",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        11
+      ],
+      "image": "tubo_mutante.webp"
+    },
+    {
+      "formId": "005EE6B3",
+      "name": "Plano: pintura de los calcinados para X-01",
+      "editorId": "recipe_mod_PowerArmor_X01_Material_Paint_Scorched",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        18
+      ],
+      "image": "pintura_calcinados_x01.webp"
+    },
+    {
+      "formId": "005FBF7F",
+      "name": "Plano: medallón de la HdA",
+      "editorId": "Recipe_Workshop_WallDecor_BOSMedallion",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        13
+      ],
+      "image": "medallon_hermandad.webp"
+    },
+    {
+      "formId": "005FBF81",
+      "name": "Plano: medallón del Enclave",
+      "editorId": "Recipe_Workshop_FloorDecor_EnclaveMedallion",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        14
+      ],
+      "image": "medallon_enclave.webp"
+    },
+    {
+      "formId": "005FBF83",
+      "name": "Plano: tubo de wendigos",
+      "editorId": "Recipe_Workshop_WendigoTube_31",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        14,
+        23
+      ],
+      "image": "tubo_wendigo.webp"
+    },
+    {
+      "formId": "005FC9AC",
+      "name": "Plano: coraza de armadura de scout sigilosa",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_Torso_Covert",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "scout_sigiloso.webp"
+    },
+    {
+      "formId": "005FC9AD",
+      "name": "Plano: máscara de armadura de scout sigilosa",
+      "editorId": "Recipe_Headwear_EnclaveScoutUniform_Mask_Covert",
+      "price": 2000,
+      "basePrice": 2667,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "scout_sigiloso.webp"
+    },
+    {
+      "formId": "005FC9AE",
+      "name": "Plano: pierna izquierda de armadura de scout sigilosa",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_LegLeft_Covert",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "scout_sigiloso.webp"
+    },
+    {
+      "formId": "005FC9AF",
+      "name": "Plano: pierna derecha de armadura de scout sigilosa",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_LegRight_Covert",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "scout_sigiloso.webp"
+    },
+    {
+      "formId": "005FC9B0",
+      "name": "Plano: brazo derecho de armadura de scout sigilosa",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_ArmRight_Covert",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "scout_sigiloso.webp"
+    },
+    {
+      "formId": "005FC9B1",
+      "name": "Plano: brazo izquierdo de armadura de scout sigilosa",
+      "editorId": "Recipe_Armor_EnclaveScoutUniform_ArmLeft_Covert",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "scout_sigiloso.webp"
+    },
+    {
+      "formId": "005FD08D",
+      "name": "Plano: pizarras científicas",
+      "editorId": "Recipe_Workshop_WallDecor_ScienceChalkboards",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        11
+      ],
+      "image": "pizarras_cientificas.webp"
+    },
+    {
+      "formId": "005FD186",
+      "name": "Plano: Monstruo imparable",
+      "editorId": "Recipe_Weapon_Melee_DeathclawGauntlet_UnstoppableMonster",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        10
+      ],
+      "image": "monstruo_imparable.webp"
+    },
+    {
+      "formId": "005FE493",
+      "name": "Plano: pistola del calibre .44 Negligencia médica",
+      "editorId": "Recipe_Weapon_Ranged_44_MedicalMalpractice",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        14
+      ],
+      "image": "negligencia_medica.webp"
+    },
+    {
+      "formId": "0060A29A",
+      "name": "Plano: partecaras",
+      "editorId": "Recipe_Weapon_Melee_FaceBreaker",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        1
+      ],
+      "image": "partecaras.webp"
+    },
+    {
+      "formId": "00613845",
+      "name": "Plano: El mejor amigo de un mecánico",
+      "editorId": "Recipe_Weapon_Melee_PipeWrench_MechanicsBestFriend_30",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        21
+      ],
+      "image": "mecanico.webp"
+    },
+    {
+      "formId": "00613846",
+      "name": "Plano: Superviviente solitario",
+      "editorId": "Recipe_Weapon_Ranged_LeverGun_SoleSurvivor_30",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        18
+      ],
+      "image": "superviviente_solitario.webp"
+    },
+    {
+      "formId": "0061D923",
+      "name": "Plano: tubo de mirelurk rey",
+      "editorId": "Recipe_Workshop_MirelurkKingTube_30",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        19
+      ],
+      "image": "rey_tubo.webp"
+    },
+    {
+      "formId": "0061E1E6",
+      "name": "Plano: casco de armadura de marine polar",
+      "editorId": "Recipe_Headwear_Marine_Arctic_Helmet_30",
+      "price": 2000,
+      "basePrice": 2667,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "marine_polar.webp"
+    },
+    {
+      "formId": "0061E1E7",
+      "name": "Plano: coraza de marine polar",
+      "editorId": "Recipe_Armor_Marine_Arctic_Torso_30",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "marine_polar.webp"
+    },
+    {
+      "formId": "0061E1E8",
+      "name": "Plano: pierna izquierda de marine polar",
+      "editorId": "Recipe_Armor_Marine_Arctic_LegLeft_30",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "marine_polar.webp"
+    },
+    {
+      "formId": "0061E1E9",
+      "name": "Plano: brazo izquierdo de marine polar",
+      "editorId": "Recipe_Armor_Marine_Arctic_ArmLeft_30",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "marine_polar.webp"
+    },
+    {
+      "formId": "0061E1EA",
+      "name": "Plano: pierna derecha de marine polar",
+      "editorId": "Recipe_Armor_Marine_Arctic_LegRight_30",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "marine_polar.webp"
+    },
+    {
+      "formId": "0061E1EB",
+      "name": "Plano: brazo derecho de marine polar",
+      "editorId": "Recipe_Armor_Marine_Arctic_ArmRight_30",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "marine_polar.webp"
+    },
+    {
+      "formId": "006209C7",
+      "name": "Plano: pintura de Slocum's Joe para servoarmadura",
+      "editorId": "recipe_mod_PowerArmor_Material_Paint_SlocumsJoe_NW",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "slocum_joe.webp"
+    },
+    {
+      "formId": "00620A51",
+      "name": "Plano: pintura para prototipo de servoarmadura Fuego infernal",
+      "editorId": "Recipe_mod_PowerArmor_Paint_Hellfire_NW",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        19
+      ],
+      "image": "fuego_infernal.webp"
+    },
+    {
+      "formId": "00620A53",
+      "name": "Plano: pintura de la Hermandad del Acero para ametralladora",
+      "editorId": "Recipe_mod_Minigun_Paint_BOS_NW",
+      "price": 1000,
+      "basePrice": 1333,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        23
+      ],
+      "image": "pintura_hermandad_ametralladora.webp"
+    },
+    {
+      "formId": "00620A54",
+      "name": "Plano: caja de suministros mediana",
+      "editorId": "Recipe_Workshop_MediumNWStash_NW",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        21
+      ],
+      "image": "alijo_mediano.webp"
+    },
+    {
+      "formId": "006214DB",
+      "name": "Plano: pintura de las Águilas de Sangre para lanzagranadas automático",
+      "editorId": "recipe_mod_weapon_AutoGrenadeLauncher_material_BloodEagle",
+      "price": 263,
+      "basePrice": 350,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_06",
+      "tierFormId": "005A5049",
+      "normalLists": [
+        2
+      ],
+      "image": "pintura_aguilas.webp"
+    },
+    {
+      "formId": "00682041",
+      "name": "Plano: lanzador de Nuka",
+      "editorId": "SCORE_S11_Recipe_NukaLauncher_GoldVendor",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        15
+      ],
+      "image": "lanzador_de_nuka.webp"
+    },
+    {
+      "formId": "0068ADEB",
+      "name": "Plano: gabardina de vaquero",
+      "editorId": "MOON_DO_Workshop_Recipe_CowboyDuster",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        10
+      ],
+      "image": "gabardina.webp"
+    },
+    {
+      "formId": "0068ADEC",
+      "name": "Plano: chaparreras de vaquero",
+      "editorId": "MOON_DO_Workshop_Recipe_CowboyChaps",
+      "price": 113,
+      "basePrice": 150,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_03",
+      "tierFormId": "005A5046",
+      "normalLists": [
+        10
+      ],
+      "image": "chaparreras.webp"
+    },
+    {
+      "formId": "0068ADED",
+      "name": "Plano: sombrero de vaquero",
+      "editorId": "MOON_DO_Workshop_Recipe_CowboyHat",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        10
+      ],
+      "image": "sombrero_baquero.webp"
+    },
+    {
+      "formId": "00691D06",
+      "name": "Plano: cama infantil de camión",
+      "editorId": "MOON_DO_Workshop_Recipe_KidsTruckBed",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        7
+      ],
+      "image": "cama_camion.webp"
+    },
+    {
+      "formId": "00691D09",
+      "name": "Plano: sombrero con paraguas",
+      "editorId": "MOON_DO_Workshop_Recipe_UmbrellaHat",
+      "price": 75,
+      "basePrice": 100,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_02",
+      "tierFormId": "005A5045",
+      "normalLists": [
+        7
+      ],
+      "image": "sombrero_paraguas.webp"
+    },
+    {
+      "formId": "00692A1C",
+      "name": "Plano: silla de necrófago",
+      "editorId": "MOON_DO_Workshop_Recipe_FeralGhoulChair",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        9
+      ],
+      "image": "silla_necrofago.webp"
+    },
+    {
+      "formId": "00696247",
+      "name": "Plano: tubo del monstruo de Flatwoods",
+      "editorId": "Recipe_Workshop_FlatwoodsMonsterTube",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        14
+      ],
+      "image": "tubo_flatwods.webp"
+    },
+    {
+      "formId": "0069624A",
+      "name": "Plano: diseño artesanal de llamas para coche clásico",
+      "editorId": "Recipe_mod_Handmade_Material_Paint_HotRod",
+      "price": 263,
+      "basePrice": 350,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_06",
+      "tierFormId": "005A5049",
+      "normalLists": [
+        22
+      ],
+      "image": "pintura_artesanal_llamas.webp"
+    },
+    {
+      "formId": "0069624B",
+      "name": "Plano: tubos de flotador",
+      "editorId": "Recipe_Workshop_FloaterTubes",
+      "price": 1500,
+      "basePrice": 2000,
+      "priceSource": "DATA/Value",
+      "tierEditorId": null,
+      "tierFormId": null,
+      "normalLists": [
+        11
+      ],
+      "image": "tubo_flotador.webp"
+    },
+    {
+      "formId": "00696251",
+      "name": "Plano: mochila alienígena",
+      "editorId": "Recipe_Backpack_Standard_Material_Alien",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        23
+      ],
+      "image": "mochila_alien.webp"
+    },
+    {
+      "formId": "00696252",
+      "name": "Plano: diseño artesanal intergaláctico",
+      "editorId": "Recipe_mod_Handmade_Material_Paint_Intergalactic",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        21
+      ],
+      "image": "pintura_intergalactica_artesanal.webp"
+    },
+    {
+      "formId": "0069687D",
+      "name": "Plano: silla de gorila",
+      "editorId": "MOON_DO_Workshop_Recipe_GorillaChair",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        9
+      ],
+      "image": "silla_gorila.webp"
+    },
+    {
+      "formId": "00755971",
+      "name": "Plano: emblema oceánico",
+      "editorId": "Recipe_Workshop_FloorDecor_AtlanticEmblem",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        19
+      ],
+      "image": "emblema_oceanico.webp"
+    },
+    {
+      "formId": "00755972",
+      "name": "Plano: señales del acuario largas",
+      "editorId": "Recipe_Workshop_WallDecor_LongAquariumSigns",
+      "price": 263,
+      "basePrice": 350,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_06",
+      "tierFormId": "005A5049",
+      "normalLists": [
+        19
+      ],
+      "image": "acuario.webp"
+    },
+    {
+      "formId": "00755973",
+      "name": "Plano: busto de acero",
+      "editorId": "Recipe_Workshop_WallDecor_SteelBust",
+      "price": 375,
+      "basePrice": 500,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_07",
+      "tierFormId": "005A504A",
+      "normalLists": [
+        13
+      ],
+      "image": "busto_accero.webp"
+    },
+    {
+      "formId": "00755974",
+      "name": "Plano: fundición",
+      "editorId": "Recipe_Workshop_FloorDecor_FoundrySmelter",
+      "price": 750,
+      "basePrice": 1000,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_09",
+      "tierFormId": "005A504C",
+      "normalLists": [
+        13
+      ],
+      "image": "fundicion.webp"
+    },
+    {
+      "formId": "0076A6A7",
+      "name": "Plano: señales del acuario",
+      "editorId": "Recipe_Workshop_WallDecor_AquariumSigns",
+      "price": 188,
+      "basePrice": 250,
+      "priceSource": "BVGO/GLOB",
+      "tierEditorId": "Econ_GoldVendor_Tier_05",
+      "tierFormId": "005A5048",
+      "normalLists": [
+        19
+      ],
+      "image": "acuario.webp"
+    }
+  ],
+  "saleLists": [
+    {
+      "number": 1,
+      "isBigSale": false,
+      "planFormIds": [
+        "0059D543",
+        "0059D544",
+        "0058961B",
+        "0059D545",
+        "0059D546",
+        "0058935B",
+        "005A1007",
+        "005D0F0C",
+        "005D0F0E",
+        "005D0F05",
+        "00599BD5",
+        "00599BD9",
+        "00599BDA",
+        "005A0ED4",
+        "00589621",
+        "0060A29A"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "0059D543",
+        "0059D544",
+        "0058961B",
+        "0059D545",
+        "0059D546",
+        "0058935B",
+        "005A1007",
+        "005D0F0C",
+        "005D0F0E",
+        "005D0F05",
+        "00599BD5",
+        "00599BD9",
+        "00599BDA",
+        "005A0ED4",
+        "00589621",
+        "0060A29A"
+      ]
+    },
+    {
+      "number": 2,
+      "isBigSale": false,
+      "planFormIds": [
+        "005A0ED1",
+        "005D0F0D",
+        "005535F9",
+        "00553BEB",
+        "00553BEA",
+        "005535FA",
+        "00553BEC",
+        "005535FB",
+        "0058961C",
+        "0058935F",
+        "005C5E21",
+        "005C5E20",
+        "00592EB7",
+        "006214DB"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "005A0ED1",
+        "005D0F0D",
+        "005535F9",
+        "00553BEB",
+        "00553BEA",
+        "005535FA",
+        "00553BEC",
+        "005535FB",
+        "0058961C",
+        "0058935F",
+        "005C5E21",
+        "005C5E20",
+        "00592EB7",
+        "006214DB"
+      ]
+    },
+    {
+      "number": 3,
+      "isBigSale": false,
+      "planFormIds": [
+        "00595858",
+        "00595857",
+        "00589623",
+        "005D86E0",
+        "005D86E3",
+        "005A1595",
+        "005CBEC6",
+        "005A158B",
+        "005A16C1",
+        "005A16C7",
+        "005A16C9",
+        "005DCA4E"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00595858",
+        "00595857",
+        "00589623",
+        "005D86E0",
+        "005D86E3",
+        "005A1595",
+        "005CBEC6",
+        "005A158B",
+        "005A16C1",
+        "005A16C7",
+        "005A16C9",
+        "005DCA4E"
+      ]
+    },
+    {
+      "number": 4,
+      "isBigSale": true,
+      "planFormIds": [],
+      "componentLists": [
+        1,
+        2,
+        3
+      ],
+      "resolvedPlanFormIds": [
+        "0059D543",
+        "0059D544",
+        "0058961B",
+        "0059D545",
+        "0059D546",
+        "0058935B",
+        "005A1007",
+        "005D0F0C",
+        "005D0F0E",
+        "005D0F05",
+        "00599BD5",
+        "00599BD9",
+        "00599BDA",
+        "005A0ED4",
+        "00589621",
+        "0060A29A",
+        "005A0ED1",
+        "005D0F0D",
+        "005535F9",
+        "00553BEB",
+        "00553BEA",
+        "005535FA",
+        "00553BEC",
+        "005535FB",
+        "0058961C",
+        "0058935F",
+        "005C5E21",
+        "005C5E20",
+        "00592EB7",
+        "006214DB",
+        "00595858",
+        "00595857",
+        "00589623",
+        "005D86E0",
+        "005D86E3",
+        "005A1595",
+        "005CBEC6",
+        "005A158B",
+        "005A16C1",
+        "005A16C7",
+        "005A16C9",
+        "005DCA4E"
+      ]
+    },
+    {
+      "number": 5,
+      "isBigSale": false,
+      "planFormIds": [
+        "00591420",
+        "00591421",
+        "005A2443",
+        "0058935E",
+        "005527DB",
+        "00554651",
+        "005527DD",
+        "00554653",
+        "005527DF",
+        "005C5E1E",
+        "005C5E1F"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00591420",
+        "00591421",
+        "005A2443",
+        "0058935E",
+        "005527DB",
+        "00554651",
+        "005527DD",
+        "00554653",
+        "005527DF",
+        "005C5E1E",
+        "005C5E1F"
+      ]
+    },
+    {
+      "number": 6,
+      "isBigSale": false,
+      "planFormIds": [
+        "005D86E1",
+        "005D86E2",
+        "005D0F06",
+        "005A0ED3",
+        "005DBD95",
+        "005DBD96",
+        "00589361",
+        "005A16BE",
+        "005A16BA",
+        "005A16C5",
+        "0059D542",
+        "005D0F04"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "005D86E1",
+        "005D86E2",
+        "005D0F06",
+        "005A0ED3",
+        "005DBD95",
+        "005DBD96",
+        "00589361",
+        "005A16BE",
+        "005A16BA",
+        "005A16C5",
+        "0059D542",
+        "005D0F04"
+      ]
+    },
+    {
+      "number": 7,
+      "isBigSale": false,
+      "planFormIds": [
+        "00589360",
+        "00592EB5",
+        "0059560D",
+        "00595616",
+        "00595610",
+        "005DF029",
+        "005DF02A",
+        "005DF02B",
+        "005DF02C",
+        "005DF02D",
+        "005DF02E",
+        "005DCA4F",
+        "00691D06",
+        "00691D09"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00589360",
+        "00592EB5",
+        "0059560D",
+        "00595616",
+        "00595610",
+        "005DF029",
+        "005DF02A",
+        "005DF02B",
+        "005DF02C",
+        "005DF02D",
+        "005DF02E",
+        "005DCA4F",
+        "00691D06",
+        "00691D09"
+      ]
+    },
+    {
+      "number": 8,
+      "isBigSale": true,
+      "planFormIds": [],
+      "componentLists": [
+        5,
+        6,
+        7
+      ],
+      "resolvedPlanFormIds": [
+        "00591420",
+        "00591421",
+        "005A2443",
+        "0058935E",
+        "005527DB",
+        "00554651",
+        "005527DD",
+        "00554653",
+        "005527DF",
+        "005C5E1E",
+        "005C5E1F",
+        "005D86E1",
+        "005D86E2",
+        "005D0F06",
+        "005A0ED3",
+        "005DBD95",
+        "005DBD96",
+        "00589361",
+        "005A16BE",
+        "005A16BA",
+        "005A16C5",
+        "0059D542",
+        "005D0F04",
+        "00589360",
+        "00592EB5",
+        "0059560D",
+        "00595616",
+        "00595610",
+        "005DF029",
+        "005DF02A",
+        "005DF02B",
+        "005DF02C",
+        "005DF02D",
+        "005DF02E",
+        "005DCA4F",
+        "00691D06",
+        "00691D09"
+      ]
+    },
+    {
+      "number": 9,
+      "isBigSale": false,
+      "planFormIds": [
+        "00589353",
+        "00589354",
+        "00589355",
+        "00589356",
+        "00589357",
+        "00589358",
+        "0059F457",
+        "005A255E",
+        "00590FC4",
+        "0058961D",
+        "005E65F5",
+        "005ECBD3",
+        "005EDA6E",
+        "00692A1C",
+        "0069687D"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00589353",
+        "00589354",
+        "00589355",
+        "00589356",
+        "00589357",
+        "00589358",
+        "0059F457",
+        "005A255E",
+        "00590FC4",
+        "0058961D",
+        "005E65F5",
+        "005ECBD3",
+        "005EDA6E",
+        "00692A1C",
+        "0069687D"
+      ]
+    },
+    {
+      "number": 10,
+      "isBigSale": false,
+      "planFormIds": [
+        "00595615",
+        "00595611",
+        "00595612",
+        "00589623",
+        "00599BD6",
+        "0058961E",
+        "005DF038",
+        "005DF045",
+        "00592F7B",
+        "005E47CC",
+        "005FD186",
+        "0068ADEC",
+        "0068ADEB",
+        "0068ADED"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00595615",
+        "00595611",
+        "00595612",
+        "00589623",
+        "00599BD6",
+        "0058961E",
+        "005DF038",
+        "005DF045",
+        "00592F7B",
+        "005E47CC",
+        "005FD186",
+        "0068ADEC",
+        "0068ADEB",
+        "0068ADED"
+      ]
+    },
+    {
+      "number": 11,
+      "isBigSale": false,
+      "planFormIds": [
+        "005527DC",
+        "00554652",
+        "005527DE",
+        "00554654",
+        "005527E0",
+        "0059F458",
+        "005A2560",
+        "00592EB6",
+        "005EE14F",
+        "005FD08D",
+        "005ECB84",
+        "005ECB85",
+        "005ECB86",
+        "0069624B"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "005527DC",
+        "00554652",
+        "005527DE",
+        "00554654",
+        "005527E0",
+        "0059F458",
+        "005A2560",
+        "00592EB6",
+        "005EE14F",
+        "005FD08D",
+        "005ECB84",
+        "005ECB85",
+        "005ECB86",
+        "0069624B"
+      ]
+    },
+    {
+      "number": 12,
+      "isBigSale": true,
+      "planFormIds": [],
+      "componentLists": [
+        9,
+        10,
+        11
+      ],
+      "resolvedPlanFormIds": [
+        "00589353",
+        "00589354",
+        "00589355",
+        "00589356",
+        "00589357",
+        "00589358",
+        "0059F457",
+        "005A255E",
+        "00590FC4",
+        "0058961D",
+        "005E65F5",
+        "005ECBD3",
+        "005EDA6E",
+        "00692A1C",
+        "0069687D",
+        "00595615",
+        "00595611",
+        "00595612",
+        "00589623",
+        "00599BD6",
+        "0058961E",
+        "005DF038",
+        "005DF045",
+        "00592F7B",
+        "005E47CC",
+        "005FD186",
+        "0068ADEC",
+        "0068ADEB",
+        "0068ADED",
+        "005527DC",
+        "00554652",
+        "005527DE",
+        "00554654",
+        "005527E0",
+        "0059F458",
+        "005A2560",
+        "00592EB6",
+        "005EE14F",
+        "005FD08D",
+        "005ECB84",
+        "005ECB85",
+        "005ECB86",
+        "0069624B"
+      ]
+    },
+    {
+      "number": 13,
+      "isBigSale": false,
+      "planFormIds": [
+        "00591422",
+        "005A2441",
+        "005A2442",
+        "005ECB83",
+        "005EDA70",
+        "005EDA6F",
+        "005FBF7F",
+        "005DF04B",
+        "0058935E",
+        "005D0F0A",
+        "005D0F0F",
+        "005D0F10",
+        "00755973",
+        "00755974"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00591422",
+        "005A2441",
+        "005A2442",
+        "005ECB83",
+        "005EDA70",
+        "005EDA6F",
+        "005FBF7F",
+        "005DF04B",
+        "0058935E",
+        "005D0F0A",
+        "005D0F0F",
+        "005D0F10",
+        "00755973",
+        "00755974"
+      ]
+    },
+    {
+      "number": 14,
+      "isBigSale": false,
+      "planFormIds": [
+        "005E47CB",
+        "005E47CA",
+        "005E47CF",
+        "005FBF83",
+        "005FE493",
+        "005FBF81",
+        "005D0F05",
+        "005A0ED3",
+        "00592EB5",
+        "00696247"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "005E47CB",
+        "005E47CA",
+        "005E47CF",
+        "005FBF83",
+        "005FE493",
+        "005FBF81",
+        "005D0F05",
+        "005A0ED3",
+        "00592EB5",
+        "00696247"
+      ]
+    },
+    {
+      "number": 15,
+      "isBigSale": false,
+      "planFormIds": [
+        "005E65FC",
+        "005E65FA",
+        "005E65FB",
+        "005EDA6D",
+        "005FC9B1",
+        "005FC9B0",
+        "005FC9AE",
+        "005FC9AF",
+        "005FC9AC",
+        "005FC9AD",
+        "00682041"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "005E65FC",
+        "005E65FA",
+        "005E65FB",
+        "005EDA6D",
+        "005FC9B1",
+        "005FC9B0",
+        "005FC9AE",
+        "005FC9AF",
+        "005FC9AC",
+        "005FC9AD",
+        "00682041"
+      ]
+    },
+    {
+      "number": 16,
+      "isBigSale": true,
+      "planFormIds": [],
+      "componentLists": [
+        13,
+        14,
+        15
+      ],
+      "resolvedPlanFormIds": [
+        "00591422",
+        "005A2441",
+        "005A2442",
+        "005ECB83",
+        "005EDA70",
+        "005EDA6F",
+        "005FBF7F",
+        "005DF04B",
+        "0058935E",
+        "005D0F0A",
+        "005D0F0F",
+        "005D0F10",
+        "00755973",
+        "00755974",
+        "005E47CB",
+        "005E47CA",
+        "005E47CF",
+        "005FBF83",
+        "005FE493",
+        "005FBF81",
+        "005D0F05",
+        "005A0ED3",
+        "00592EB5",
+        "00696247",
+        "005E65FC",
+        "005E65FA",
+        "005E65FB",
+        "005EDA6D",
+        "005FC9B1",
+        "005FC9B0",
+        "005FC9AE",
+        "005FC9AF",
+        "005FC9AC",
+        "005FC9AD",
+        "00682041"
+      ]
+    },
+    {
+      "number": 17,
+      "isBigSale": false,
+      "planFormIds": [
+        "0059D543",
+        "0059D544",
+        "0058961B",
+        "0059D545",
+        "0059D546",
+        "0058935B",
+        "005A1007",
+        "005D0F0C",
+        "005D0F0E",
+        "005D0F05",
+        "00599BD5",
+        "00599BD9",
+        "00599BDA",
+        "005A0ED4",
+        "00589621"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "0059D543",
+        "0059D544",
+        "0058961B",
+        "0059D545",
+        "0059D546",
+        "0058935B",
+        "005A1007",
+        "005D0F0C",
+        "005D0F0E",
+        "005D0F05",
+        "00599BD5",
+        "00599BD9",
+        "00599BDA",
+        "005A0ED4",
+        "00589621"
+      ]
+    },
+    {
+      "number": 18,
+      "isBigSale": false,
+      "planFormIds": [
+        "005A0ED1",
+        "005D0F0D",
+        "005535F9",
+        "00553BEB",
+        "00553BEA",
+        "005535FA",
+        "00553BEC",
+        "005535FB",
+        "0058961C",
+        "0058935F",
+        "005C5E21",
+        "005C5E20",
+        "00592EB7",
+        "00613846",
+        "005EE6B3"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "005A0ED1",
+        "005D0F0D",
+        "005535F9",
+        "00553BEB",
+        "00553BEA",
+        "005535FA",
+        "00553BEC",
+        "005535FB",
+        "0058961C",
+        "0058935F",
+        "005C5E21",
+        "005C5E20",
+        "00592EB7",
+        "00613846",
+        "005EE6B3"
+      ]
+    },
+    {
+      "number": 19,
+      "isBigSale": false,
+      "planFormIds": [
+        "00595858",
+        "00595857",
+        "00589623",
+        "005D86E0",
+        "005D86E3",
+        "005A1595",
+        "005CBEC6",
+        "005A158B",
+        "005A16C1",
+        "005A16C7",
+        "005A16C9",
+        "0061D923",
+        "00620A51",
+        "00755972",
+        "00755971",
+        "0076A6A7"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00595858",
+        "00595857",
+        "00589623",
+        "005D86E0",
+        "005D86E3",
+        "005A1595",
+        "005CBEC6",
+        "005A158B",
+        "005A16C1",
+        "005A16C7",
+        "005A16C9",
+        "0061D923",
+        "00620A51",
+        "00755972",
+        "00755971",
+        "0076A6A7"
+      ]
+    },
+    {
+      "number": 20,
+      "isBigSale": true,
+      "planFormIds": [],
+      "componentLists": [
+        17,
+        18,
+        19
+      ],
+      "resolvedPlanFormIds": [
+        "0059D543",
+        "0059D544",
+        "0058961B",
+        "0059D545",
+        "0059D546",
+        "0058935B",
+        "005A1007",
+        "005D0F0C",
+        "005D0F0E",
+        "005D0F05",
+        "00599BD5",
+        "00599BD9",
+        "00599BDA",
+        "005A0ED4",
+        "00589621",
+        "005A0ED1",
+        "005D0F0D",
+        "005535F9",
+        "00553BEB",
+        "00553BEA",
+        "005535FA",
+        "00553BEC",
+        "005535FB",
+        "0058961C",
+        "0058935F",
+        "005C5E21",
+        "005C5E20",
+        "00592EB7",
+        "00613846",
+        "005EE6B3",
+        "00595858",
+        "00595857",
+        "00589623",
+        "005D86E0",
+        "005D86E3",
+        "005A1595",
+        "005CBEC6",
+        "005A158B",
+        "005A16C1",
+        "005A16C7",
+        "005A16C9",
+        "0061D923",
+        "00620A51",
+        "00755972",
+        "00755971",
+        "0076A6A7"
+      ]
+    },
+    {
+      "number": 21,
+      "isBigSale": false,
+      "planFormIds": [
+        "00591420",
+        "00591421",
+        "005A2443",
+        "0058935E",
+        "005527DB",
+        "00554651",
+        "005527DD",
+        "00554653",
+        "005527DF",
+        "005C5E1E",
+        "005C5E1F",
+        "00613845",
+        "00620A54",
+        "00696252"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "00591420",
+        "00591421",
+        "005A2443",
+        "0058935E",
+        "005527DB",
+        "00554651",
+        "005527DD",
+        "00554653",
+        "005527DF",
+        "005C5E1E",
+        "005C5E1F",
+        "00613845",
+        "00620A54",
+        "00696252"
+      ]
+    },
+    {
+      "number": 22,
+      "isBigSale": false,
+      "planFormIds": [
+        "005D86E1",
+        "005D86E2",
+        "005D0F06",
+        "005A0ED3",
+        "005DBD95",
+        "005DBD96",
+        "00589361",
+        "005A16BE",
+        "005A16BA",
+        "005A16C5",
+        "0059D542",
+        "005D0F04",
+        "0069624A"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "005D86E1",
+        "005D86E2",
+        "005D0F06",
+        "005A0ED3",
+        "005DBD95",
+        "005DBD96",
+        "00589361",
+        "005A16BE",
+        "005A16BA",
+        "005A16C5",
+        "0059D542",
+        "005D0F04",
+        "0069624A"
+      ]
+    },
+    {
+      "number": 23,
+      "isBigSale": false,
+      "planFormIds": [
+        "0061E1E9",
+        "0061E1EB",
+        "0061E1E8",
+        "0061E1EA",
+        "0061E1E7",
+        "0061E1E6",
+        "00620A53",
+        "006209C7",
+        "005E65F5",
+        "0058935E",
+        "005EDA6E",
+        "005FBF83",
+        "00696251"
+      ],
+      "componentLists": [],
+      "resolvedPlanFormIds": [
+        "0061E1E9",
+        "0061E1EB",
+        "0061E1E8",
+        "0061E1EA",
+        "0061E1E7",
+        "0061E1E6",
+        "00620A53",
+        "006209C7",
+        "005E65F5",
+        "0058935E",
+        "005EDA6E",
+        "005FBF83",
+        "00696251"
+      ]
+    },
+    {
+      "number": 24,
+      "isBigSale": true,
+      "planFormIds": [],
+      "componentLists": [
+        21,
+        22,
+        23
+      ],
+      "resolvedPlanFormIds": [
+        "00591420",
+        "00591421",
+        "005A2443",
+        "0058935E",
+        "005527DB",
+        "00554651",
+        "005527DD",
+        "00554653",
+        "005527DF",
+        "005C5E1E",
+        "005C5E1F",
+        "00613845",
+        "00620A54",
+        "00696252",
+        "005D86E1",
+        "005D86E2",
+        "005D0F06",
+        "005A0ED3",
+        "005DBD95",
+        "005DBD96",
+        "00589361",
+        "005A16BE",
+        "005A16BA",
+        "005A16C5",
+        "0059D542",
+        "005D0F04",
+        "0069624A",
+        "0061E1E9",
+        "0061E1EB",
+        "0061E1E8",
+        "0061E1EA",
+        "0061E1E7",
+        "0061E1E6",
+        "00620A53",
+        "006209C7",
+        "005E65F5",
+        "005EDA6E",
+        "005FBF83",
+        "00696251"
+      ]
+    }
+  ]
+}
