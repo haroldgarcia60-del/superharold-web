@@ -260,12 +260,32 @@ export async function generateMetadata({
     article.summary ||
     `${article.title} — ${article.game.name} | SuperHarOld`
 
-  const imageUrl = article.coverImage
+  /*
+   * PORTADA ORIGINAL DE SANITY
+   *
+   * No forzamos 1200x630 y no usamos crop.
+   * Solo obtenemos una versión de buena resolución.
+   */
+  const coverImageUrl = article.coverImage
     ? urlFor(article.coverImage)
         .width(1200)
-        .height(630)
-        .fit('crop')
+        .fit('max')
         .url()
+    : undefined
+
+  /*
+   * TARJETA SOCIAL
+   *
+   * /api/og recibe la portada original y crea una
+   * imagen real de 1200x630 para Discord, X, etc.
+   */
+  const socialImageUrl = coverImageUrl
+    ? `https://www.superharold.es/api/og?${new URLSearchParams({
+        image: coverImageUrl,
+        title: article.title,
+        game: article.game.name,
+        section: sectionInfo.label,
+      }).toString()}`
     : undefined
 
   return {
@@ -279,11 +299,11 @@ export async function generateMetadata({
       siteName: 'SuperHarOld',
       locale: 'es_ES',
 
-      ...(imageUrl
+      ...(socialImageUrl
         ? {
             images: [
               {
-                url: imageUrl,
+                url: socialImageUrl,
                 width: 1200,
                 height: 630,
                 alt: article.coverImage?.alt || article.title,
@@ -298,9 +318,9 @@ export async function generateMetadata({
       title: article.title,
       description,
 
-      ...(imageUrl
+      ...(socialImageUrl
         ? {
-            images: [imageUrl],
+            images: [socialImageUrl],
           }
         : {}),
     },
