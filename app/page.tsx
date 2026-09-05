@@ -18,8 +18,9 @@ type Game = {
   }
 }
 
-type News = {
+type ContentItem = {
   _id: string
+  _type: 'news' | 'guide' | 'build' | 'datamine'
   title: string
   slug: {
     current: string
@@ -42,12 +43,32 @@ type News = {
   }
 }
 
+const sectionByType = {
+  news: 'noticias',
+  guide: 'guias',
+  build: 'builds',
+  datamine: 'datamineos',
+} as const
+
+const labelByType = {
+  news: 'Noticia',
+  guide: 'Guía',
+  build: 'Build',
+  datamine: 'Datamineo',
+} as const
+
 function getGameHref(game: Game) {
   if (game.slug.current === 'fallout-76') {
     return '/fallout-76'
   }
 
   return `/otros-juegos?game=${encodeURIComponent(game.slug.current)}`
+}
+
+function getContentHref(item: ContentItem) {
+  const section = sectionByType[item._type]
+
+  return `/${item.game.slug.current}/${section}/${item.slug.current}`
 }
 
 export default async function Home() {
@@ -64,14 +85,15 @@ export default async function Home() {
     }`,
   )
 
-  const news = await client.fetch<News[]>(
+  const latestContent = await client.fetch<ContentItem[]>(
     `*[
-      _type == "news" &&
+      _type in ["news", "guide", "build", "datamine"] &&
       defined(slug.current) &&
       defined(publishedAt) &&
       defined(game->slug.current)
     ] | order(publishedAt desc)[0...3] {
       _id,
+      _type,
       title,
       slug,
       summary,
@@ -105,7 +127,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ÚLTIMAS NOTICIAS */}
+      {/* ÚLTIMO CONTENIDO */}
       <section className="border-b border-surface-light">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="mb-8">
@@ -114,20 +136,24 @@ export default async function Home() {
             </p>
 
             <h2 className="mt-2 text-3xl font-black">
-              Últimas noticias
+              Último contenido
             </h2>
+
+            <p className="mt-3 max-w-2xl text-text-secondary">
+              Lo último publicado en SuperHarOld.
+            </p>
           </div>
 
-          {news.length > 0 ? (
+          {latestContent.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {news.map((item) => (
+              {latestContent.map((item) => (
                 <ContentCard
                   key={item._id}
                   title={item.title}
                   summary={item.summary}
                   publishedAt={item.publishedAt}
-                  href={`/${item.game.slug.current}/noticias/${item.slug.current}`}
-                  typeLabel={item.game.name}
+                  href={getContentHref(item)}
+                  typeLabel={`${labelByType[item._type]} · ${item.game.name}`}
                   typeColorClass="text-primary"
                   coverImage={item.coverImage}
                 />
@@ -135,7 +161,7 @@ export default async function Home() {
             </div>
           ) : (
             <div className="rounded-2xl border border-surface-light bg-surface p-8 text-text-secondary">
-              Todavía no hay noticias publicadas.
+              Todavía no hay contenido publicado.
             </div>
           )}
         </div>
@@ -153,7 +179,7 @@ export default async function Home() {
           </h2>
 
           <p className="mt-3 max-w-2xl text-text-secondary">
-            Explora todo el contenido publicado de cada juego en SuperHarold.
+            Explora todo el contenido publicado de cada juego en SuperHarOld.
           </p>
         </div>
 
@@ -165,7 +191,6 @@ export default async function Home() {
                 href={getGameHref(game)}
                 className="group overflow-hidden rounded-2xl border border-surface-light bg-surface transition duration-300 hover:-translate-y-1 hover:border-primary"
               >
-                {/* IMAGEN DEL JUEGO */}
                 <div className="relative h-[220px] w-full overflow-hidden bg-surface-light sm:h-[260px]">
                   {game.coverImage ? (
                     <Image
@@ -188,7 +213,6 @@ export default async function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent" />
                 </div>
 
-                {/* INFORMACIÓN */}
                 <div className="p-6 sm:p-7">
                   {game.slug.current === 'fallout-76' && (
                     <p className="mb-3 text-sm font-bold uppercase tracking-widest text-primary">

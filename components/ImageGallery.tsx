@@ -44,11 +44,11 @@ export default function ImageGallery({
   }
 
   return (
-    <figure className="my-10">
+    <figure className="mx-auto my-8 w-full max-w-xl">
 
       {/* TÍTULO DE LA GALERÍA */}
       {title && (
-        <h2 className="mb-5 text-2xl font-black text-white md:text-3xl">
+        <h2 className="mb-4 text-2xl font-black text-white md:text-3xl">
           {title}
         </h2>
       )}
@@ -57,18 +57,18 @@ export default function ImageGallery({
       <div className="overflow-hidden rounded-2xl border border-surface-light bg-background">
 
         {/* IMAGEN */}
-        <div className="relative flex min-h-[350px] items-center justify-center p-4 md:min-h-[600px] md:p-6">
+        <div className="relative flex items-center justify-center p-3 md:p-4">
 
           {currentImage?.asset && (
             <Image
               src={urlFor(currentImage)
-                .width(1400)
+                .width(1000)
                 .url()}
               alt={currentImage.alt || 'Imagen de la galería'}
-              width={1400}
-              height={1000}
-              className="max-h-[70vh] h-auto w-auto max-w-full object-contain"
-              sizes="(max-width: 1024px) 100vw, 960px"
+              width={1000}
+              height={700}
+              className="h-auto max-h-[260px] w-auto max-w-full object-contain md:max-h-[340px]"
+              sizes="(max-width: 768px) 100vw, 768px"
             />
           )}
 
@@ -78,7 +78,7 @@ export default function ImageGallery({
               type="button"
               onClick={previousImage}
               aria-label="Imagen anterior"
-              className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/70 text-2xl font-bold text-white transition hover:border-primary hover:text-primary md:left-5"
+              className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/70 text-2xl font-bold text-white transition hover:border-primary hover:text-primary"
             >
               ‹
             </button>
@@ -90,7 +90,7 @@ export default function ImageGallery({
               type="button"
               onClick={nextImage}
               aria-label="Imagen siguiente"
-              className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/70 text-2xl font-bold text-white transition hover:border-primary hover:text-primary md:right-5"
+              className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/70 text-2xl font-bold text-white transition hover:border-primary hover:text-primary"
             >
               ›
             </button>
@@ -99,14 +99,14 @@ export default function ImageGallery({
         </div>
 
         {/* INFORMACIÓN */}
-        <div className="border-t border-surface-light px-5 py-4">
+        <div className="border-t border-surface-light px-4 py-3">
 
-          <div className="flex items-start justify-between gap-5">
+          <div className="flex items-start justify-between gap-4">
 
             {/* PIE DE IMAGEN */}
             <div className="min-w-0 flex-1">
               {currentImage.caption ? (
-                <figcaption className="text-sm leading-6 text-text-secondary md:text-base">
+                <figcaption className="text-sm leading-6 text-text-secondary">
                   {currentImage.caption}
                 </figcaption>
               ) : (
@@ -129,7 +129,7 @@ export default function ImageGallery({
 
       {/* PUNTOS DE NAVEGACIÓN */}
       {images.length > 1 && images.length <= 12 && (
-        <div className="mt-4 flex flex-wrap justify-center gap-2">
+        <div className="mt-3 flex flex-wrap justify-center gap-2">
           {images.map((image, index) => (
             <button
               key={image._key || index}
