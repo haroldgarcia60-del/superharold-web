@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import {notFound} from 'next/navigation'
-import {PortableText, type PortableTextComponents} from '@portabletext/react'
-import type {Metadata} from 'next'
+import { notFound } from 'next/navigation'
+import { PortableText, type PortableTextComponents } from '@portabletext/react'
+import type { Metadata } from 'next'
 import ImageGallery from '@/components/ImageGallery'
-import {client} from '@/sanity/lib/client'
-import {urlFor} from '@/sanity/lib/image'
+import { client } from '@/sanity/lib/client'
+import { urlFor } from '@/sanity/lib/image'
 
 type ContentType = 'news' | 'guide' | 'build' | 'datamine'
 
@@ -97,25 +97,25 @@ const sectionConfig: Record<
 
 const portableTextComponents: PortableTextComponents = {
   block: {
-    normal: ({children}) => (
+    normal: ({ children }) => (
       <p className="my-5 text-base leading-8 text-text-secondary md:text-lg">
         {children}
       </p>
     ),
 
-    h2: ({children}) => (
+    h2: ({ children }) => (
       <h2 className="mb-4 mt-10 text-3xl font-black text-white">
         {children}
       </h2>
     ),
 
-    h3: ({children}) => (
+    h3: ({ children }) => (
       <h3 className="mb-3 mt-8 text-2xl font-black text-white">
         {children}
       </h3>
     ),
 
-    blockquote: ({children}) => (
+    blockquote: ({ children }) => (
       <blockquote className="my-8 border-l-4 border-primary pl-5 italic text-text-secondary">
         {children}
       </blockquote>
@@ -123,13 +123,13 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   list: {
-    bullet: ({children}) => (
+    bullet: ({ children }) => (
       <ul className="my-6 list-disc space-y-2 pl-6 text-text-secondary">
         {children}
       </ul>
     ),
 
-    number: ({children}) => (
+    number: ({ children }) => (
       <ol className="my-6 list-decimal space-y-2 pl-6 text-text-secondary">
         {children}
       </ol>
@@ -137,23 +137,23 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   listItem: {
-    bullet: ({children}) => (
+    bullet: ({ children }) => (
       <li className="leading-7">{children}</li>
     ),
 
-    number: ({children}) => (
+    number: ({ children }) => (
       <li className="leading-7">{children}</li>
     ),
   },
 
   marks: {
-    strong: ({children}) => (
+    strong: ({ children }) => (
       <strong className="font-bold text-white">{children}</strong>
     ),
 
-    em: ({children}) => <em className="italic">{children}</em>,
+    em: ({ children }) => <em className="italic">{children}</em>,
 
-    link: ({value, children}) => {
+    link: ({ value, children }) => {
       const href = typeof value?.href === 'string' ? value.href : '#'
       const external = href.startsWith('http')
 
@@ -171,7 +171,7 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   types: {
-    image: ({value}) => {
+    image: ({ value }) => {
       const image = value as ContentImageValue
 
       if (!image?.asset) {
@@ -180,19 +180,19 @@ const portableTextComponents: PortableTextComponents = {
 
       return (
         <figure className="my-10">
-          <div className="overflow-hidden rounded-2xl border border-surface-light bg-background">
+          <div className="mx-auto max-w-[500px] overflow-hidden rounded-2xl border border-surface-light bg-background">
             <Image
-              src={urlFor(image).width(1200).url()}
+              src={urlFor(image).width(800).fit('max').url()}
               alt={image.alt || 'Imagen de la publicación'}
-              width={1200}
-              height={800}
+              width={800}
+              height={533}
               className="h-auto w-full object-contain"
-              sizes="(max-width: 1024px) 100vw, 960px"
+              sizes="(max-width: 550px) 100vw, 500px"
             />
           </div>
 
           {image.caption && (
-            <figcaption className="mt-3 text-center text-sm italic text-text-secondary">
+            <figcaption className="mx-auto mt-3 max-w-[500px] text-center text-sm italic text-text-secondary">
               {image.caption}
             </figcaption>
           )}
@@ -200,7 +200,7 @@ const portableTextComponents: PortableTextComponents = {
       )
     },
 
-    gallery: ({value}) => {
+    gallery: ({ value }) => {
       const gallery = value as GalleryValue
 
       if (!gallery.images || gallery.images.length === 0) {
@@ -222,7 +222,7 @@ const portableTextComponents: PortableTextComponents = {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const {game, section, slug} = await params
+  const { game, section, slug } = await params
 
   const sectionInfo = sectionConfig[section]
 
@@ -268,9 +268,9 @@ export async function generateMetadata({
    */
   const coverImageUrl = article.coverImage
     ? urlFor(article.coverImage)
-        .width(1200)
-        .fit('max')
-        .url()
+      .width(1200)
+      .fit('max')
+      .url()
     : undefined
 
   /*
@@ -281,11 +281,11 @@ export async function generateMetadata({
    */
   const socialImageUrl = coverImageUrl
     ? `https://www.superharold.es/api/og?${new URLSearchParams({
-        image: coverImageUrl,
-        title: article.title,
-        game: article.game.name,
-        section: sectionInfo.label,
-      }).toString()}`
+      image: coverImageUrl,
+      title: article.title,
+      game: article.game.name,
+      section: sectionInfo.label,
+    }).toString()}`
     : undefined
 
   return {
@@ -301,15 +301,15 @@ export async function generateMetadata({
 
       ...(socialImageUrl
         ? {
-            images: [
-              {
-                url: socialImageUrl,
-                width: 1200,
-                height: 630,
-                alt: article.coverImage?.alt || article.title,
-              },
-            ],
-          }
+          images: [
+            {
+              url: socialImageUrl,
+              width: 1200,
+              height: 630,
+              alt: article.coverImage?.alt || article.title,
+            },
+          ],
+        }
         : {}),
     },
 
@@ -320,8 +320,8 @@ export async function generateMetadata({
 
       ...(socialImageUrl
         ? {
-            images: [socialImageUrl],
-          }
+          images: [socialImageUrl],
+        }
         : {}),
     },
   }
@@ -330,7 +330,7 @@ export async function generateMetadata({
 export default async function OtherGameArticlePage({
   params,
 }: PageProps) {
-  const {game, section, slug} = await params
+  const { game, section, slug } = await params
 
   const sectionInfo = sectionConfig[section]
 

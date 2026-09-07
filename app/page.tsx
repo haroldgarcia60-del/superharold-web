@@ -115,7 +115,7 @@ export default async function Home() {
       <section className="border-b border-surface-light">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <p className="mb-4 text-2xl font-bold tracking-[0.18em] text-primary">
-            SuperHarol
+            SuperHarold
           </p>
 
           <h1 className="max-w-5xl text-4xl font-black leading-tight md:text-6xl">
