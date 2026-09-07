@@ -22,7 +22,7 @@ type Game = {
 
 type ContentItem = {
   _id: string
-  _type: 'news' | 'guide' | 'build' | 'datamine'
+  _type: 'news' | 'guide' | 'build' | 'datamine' | 'event'
   title: string
   slug: {
     current: string
@@ -50,6 +50,7 @@ const sectionByType = {
   guide: 'guias',
   build: 'builds',
   datamine: 'datamineos',
+  event: 'eventos',
 } as const
 
 const labelByType = {
@@ -57,6 +58,7 @@ const labelByType = {
   guide: 'Guía',
   build: 'Build',
   datamine: 'Datamineo',
+  event: 'Evento',
 } as const
 
 function getGameHref(game: Game) {
@@ -89,23 +91,35 @@ export default async function Home() {
 
   const latestContent = await client.fetch<ContentItem[]>(
     `*[
-      _type in ["news", "guide", "build", "datamine"] &&
+      (
+        _type in ["news", "guide", "build", "datamine"] &&
+        defined(game->slug.current)
+      ) ||
+      _type == "event"
+    ] [
       defined(slug.current) &&
-      defined(publishedAt) &&
-      defined(game->slug.current)
+      defined(publishedAt)
     ] | order(publishedAt desc)[0...3] {
       _id,
       _type,
       title,
       slug,
-      summary,
+      "summary": coalesce(summary, excerpt),
       publishedAt,
       featured,
-      coverImage,
-      game->{
-        name,
-        slug
-      }
+      "coverImage": coalesce(coverImage, mainImage),
+      "game": select(
+        _type == "event" => {
+          "name": "Fallout 76",
+          "slug": {
+            "current": "fallout-76"
+          }
+        },
+        game->{
+          name,
+          slug
+        }
+      )
     }`,
   )
 
