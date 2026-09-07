@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import ImageGallery from '@/components/ImageGallery'
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
-
+import ArticleImage from '@/components/ArticleImage'
 type ContentType = 'news' | 'guide' | 'build' | 'datamine'
 
 type PortableTextBlock = {
@@ -171,35 +171,21 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   types: {
-    image: ({ value }) => {
-      const image = value as ContentImageValue
+    image: ({value}) => {
+  const image = value as ContentImageValue
 
-      if (!image?.asset) {
-        return null
-      }
+  if (!image?.asset) {
+    return null
+  }
 
-      return (
-        <figure className="my-10">
-          <div className="mx-auto max-w-[500px] overflow-hidden rounded-2xl border border-surface-light bg-background">
-            <Image
-              src={urlFor(image).width(800).fit('max').url()}
-              alt={image.alt || 'Imagen de la publicación'}
-              width={800}
-              height={533}
-              className="h-auto w-full object-contain"
-              sizes="(max-width: 550px) 100vw, 500px"
-            />
-          </div>
-
-          {image.caption && (
-            <figcaption className="mx-auto mt-3 max-w-[500px] text-center text-sm italic text-text-secondary">
-              {image.caption}
-            </figcaption>
-          )}
-        </figure>
-      )
-    },
-
+  return (
+    <ArticleImage
+      src={urlFor(image).width(1600).fit('max').url()}
+      alt={image.alt || 'Imagen de la publicación'}
+      caption={image.caption}
+    />
+  )
+},
     gallery: ({ value }) => {
       const gallery = value as GalleryValue
 
