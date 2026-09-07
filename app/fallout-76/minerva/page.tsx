@@ -96,7 +96,7 @@ export default function MinervaPage() {
       <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14">
         {/* CABECERA DE PÁGINA */}
         <section className="mb-8">
-          <div className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary">
+          <div className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-secondary">
             Fallout 76
           </div>
 

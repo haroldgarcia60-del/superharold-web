@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import ContentCard from '@/components/ContentCard'
-import {client} from '@/sanity/lib/client'
+import { client } from '@/sanity/lib/client'
 
 type ContentType = 'news' | 'guide' | 'build' | 'datamine'
 
@@ -158,7 +158,7 @@ export default async function Fallout76Page() {
             Contenido de Fallout 76
           </h2>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* NOTICIAS */}
             <Link
               href="/fallout-76/noticias"
@@ -244,6 +244,27 @@ export default async function Fallout76Page() {
 
               <p className="mt-auto pt-6 font-bold text-primary">
                 Ver datamineos →
+              </p>
+            </Link>
+            {/* EVENTOS */}
+            <Link
+              href="/fallout-76/eventos"
+              className="group flex h-full flex-col rounded-2xl border border-surface-light bg-surface p-6 transition duration-300 hover:-translate-y-1 hover:border-primary"
+            >
+              <p className="text-sm font-bold uppercase tracking-widest text-secondary">
+                Temporales
+              </p>
+
+              <h3 className="mt-3 text-2xl font-black group-hover:text-primary">
+                Eventos
+              </h3>
+
+              <p className="mt-3 leading-7 text-text-secondary">
+                Guías, recompensas y toda la información de los eventos de Fallout 76.
+              </p>
+
+              <p className="mt-auto pt-6 font-bold text-primary">
+                Ver eventos →
               </p>
             </Link>
 
