@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { PortableText } from '@portabletext/react'
 import imageUrlBuilder from '@sanity/image-url'
+import type { Metadata } from 'next'
 import { client } from '@/sanity/lib/client'
 
 const builder = imageUrlBuilder(client)
@@ -54,6 +55,10 @@ type Event = {
     publishedAt?: string
 }
 
+type EventPageProps = {
+    params: Promise<{ slug: string }>
+}
+
 async function getEvent(slug: string): Promise<Event | null> {
     return client.fetch(
         `
@@ -91,6 +96,66 @@ async function getEvent(slug: string): Promise<Event | null> {
     `,
         { slug },
     )
+}
+
+export async function generateMetadata({
+    params,
+}: EventPageProps): Promise<Metadata> {
+    const { slug } = await params
+    const event = await getEvent(slug)
+
+    if (!event) return {}
+
+    const description =
+        event.excerpt ||
+        `${event.title} — Evento de Fallout 76 | SuperHarOld`
+
+    const mainImageUrl = event.mainImage
+        ? urlFor(event.mainImage).width(1200).fit('max').url()
+        : undefined
+
+    const socialImageUrl = mainImageUrl
+        ? `https://www.superharold.es/api/og?${new URLSearchParams({
+              image: mainImageUrl,
+              title: event.title,
+              game: 'Fallout 76',
+              section: 'Eventos',
+          }).toString()}`
+        : undefined
+
+    const canonicalUrl =
+        `https://www.superharold.es/fallout-76/eventos/${event.slug}`
+
+    return {
+        title: event.title,
+        description,
+        alternates: { canonical: canonicalUrl },
+        openGraph: {
+            title: event.title,
+            description,
+            type: 'article',
+            siteName: 'SuperHarOld',
+            locale: 'es_ES',
+            url: canonicalUrl,
+            ...(event.publishedAt ? { publishedTime: event.publishedAt } : {}),
+            ...(socialImageUrl
+                ? {
+                      images: [{
+                          url: socialImageUrl,
+                          width: 1200,
+                          height: 630,
+                          alt: event.mainImage?.alt || event.title,
+                      }],
+                  }
+                : {}),
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: event.title,
+            description,
+            ...(socialImageUrl ? { images: [socialImageUrl] } : {}),
+        },
+    }
 }
 
 function formatDate(date?: string) {
@@ -344,9 +409,7 @@ function PackageRewardsSection({
 
 export default async function EventPage({
     params,
-}: {
-    params: Promise<{ slug: string }>
-}) {
+}: EventPageProps) {
     const { slug } = await params
     const event = await getEvent(slug)
 
