@@ -30,6 +30,15 @@ type Outfit = {
     image?: any
 }
 
+type PackageReward = {
+    _key: string
+    id?: {
+        current?: string
+    }
+    name: string
+    image?: any
+}
+
 type Event = {
     _id: string
     title: string
@@ -40,6 +49,7 @@ type Event = {
     endDate?: string
     rewards?: Reward[]
     outfits?: Outfit[]
+    packageRewards?: PackageReward[]
     body?: any[]
     publishedAt?: string
 }
@@ -67,6 +77,12 @@ async function getEvent(slug: string): Promise<Event | null> {
           id,
           name,
           dropChance,
+          image
+        },
+        packageRewards[]{
+          _key,
+          id,
+          name,
           image
         },
         body,
@@ -271,6 +287,61 @@ function OutfitSection({
     )
 }
 
+function PackageRewardsSection({
+    rewards,
+    title,
+    description,
+}: {
+    rewards: PackageReward[]
+    title?: string
+    description?: string
+}) {
+    if (rewards.length === 0) return null
+
+    return (
+        <section className="my-14 border-y border-surface-light py-10">
+            {title && (
+                <h2 className="text-3xl font-black">
+                    {title}
+                </h2>
+            )}
+
+            {description && (
+                <p className="mt-3 max-w-3xl leading-7 text-text-secondary">
+                    {description}
+                </p>
+            )}
+
+            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {rewards.map((reward) => (
+                    <div
+                        key={reward._key}
+                        className="overflow-hidden rounded-2xl border border-surface-light bg-surface"
+                    >
+                        {reward.image && (
+                            <div className="relative aspect-square bg-background">
+                                <Image
+                                    src={urlFor(reward.image)
+                                        .width(700)
+                                        .height(700)
+                                        .url()}
+                                    alt={reward.image.alt || reward.name}
+                                    fill
+                                    className="object-contain p-4"
+                                />
+                            </div>
+                        )}
+
+                        <div className="p-5">
+                            <h3 className="font-bold">{reward.name}</h3>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    )
+}
+
 export default async function EventPage({
     params,
 }: {
@@ -285,6 +356,7 @@ export default async function EventPage({
 
     const rewards = event.rewards || []
     const outfits = event.outfits || []
+    const packageRewards = event.packageRewards || []
 
     /*
      * Detectamos si el artículo ya utiliza los nuevos
@@ -298,6 +370,11 @@ export default async function EventPage({
     const hasOutfitsBlock =
         event.body?.some(
             (block) => block._type === 'eventOutfitsBlock',
+        ) ?? false
+
+    const hasPackageRewardsBlock =
+        event.body?.some(
+            (block) => block._type === 'eventPackageRewardsBlock',
         ) ?? false
 
     return (
@@ -438,6 +515,19 @@ export default async function EventPage({
                                         ),
 
                                         /*
+                                         * BLOQUE DE RECOMPENSAS DE PAQUETES
+                                         */
+                                        eventPackageRewardsBlock: ({ value }) => (
+                                            <div className="not-prose">
+                                                <PackageRewardsSection
+                                                    rewards={packageRewards}
+                                                    title={value.title}
+                                                    description={value.description}
+                                                />
+                                            </div>
+                                        ),
+
+                                        /*
                                          * IMAGEN NORMAL
                                          */
                                         image: ({ value }) => (
@@ -540,6 +630,10 @@ export default async function EventPage({
 
                 {!hasOutfitsBlock && (
                     <OutfitSection outfits={outfits} />
+                )}
+
+                {!hasPackageRewardsBlock && (
+                    <PackageRewardsSection rewards={packageRewards} />
                 )}
             </article>
         </main>
