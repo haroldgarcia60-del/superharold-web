@@ -48,6 +48,7 @@ type Event = {
     mainImage?: any
     startDate?: string
     endDate?: string
+    status?: 'scheduled' | 'active' | 'finished' | 'cancelled'
     rewards?: Reward[]
     outfits?: Outfit[]
     packageRewards?: PackageReward[]
@@ -70,6 +71,7 @@ async function getEvent(slug: string): Promise<Event | null> {
         mainImage,
         startDate,
         endDate,
+        status,
         rewards[]{
           _key,
           id,
@@ -459,32 +461,44 @@ export default async function EventPage({
                         </p>
                     )}
 
-                    {(event.startDate || event.endDate) && (
-                        <div className="mt-6 flex flex-wrap gap-3">
-                            {event.startDate && (
-                                <div className="rounded-xl border border-surface-light bg-surface px-4 py-3">
-                                    <span className="text-accent">
-                                        Inicio
+                    {event.status === 'cancelled' ? (
+                        <div className="mt-6">
+                            <div className="inline-flex rounded-xl border border-secondary/40 bg-secondary/10 px-5 py-4">
+                                <div>
+                                    <span className="text-sm font-bold uppercase tracking-widest text-secondary">
+                                        Estado del evento
                                     </span>
-
-                                    <p className="mt-1 font-bold">
-                                        {formatDate(event.startDate)}
+                                    <p className="mt-1 text-lg font-black">
+                                        EVENTO CANCELADO
                                     </p>
                                 </div>
-                            )}
-
-                            {event.endDate && (
-                                <div className="rounded-xl border border-surface-light bg-surface px-4 py-3">
-                                    <span className="text-accent">
-                                        Finaliza
-                                    </span>
-
-                                    <p className="mt-1 font-bold">
-                                        {formatDate(event.endDate)}
-                                    </p>
-                                </div>
-                            )}
+                            </div>
                         </div>
+                    ) : (
+                        (event.startDate || event.endDate) && (
+                            <div className="mt-6 flex flex-wrap gap-3">
+                                {event.startDate && (
+                                    <div className="rounded-xl border border-surface-light bg-surface px-4 py-3">
+                                        <span className="text-accent">
+                                            Inicio
+                                        </span>
+                                        <p className="mt-1 font-bold">
+                                            {formatDate(event.startDate)}
+                                        </p>
+                                    </div>
+                                )}
+                                {event.endDate && (
+                                    <div className="rounded-xl border border-surface-light bg-surface px-4 py-3">
+                                        <span className="text-accent">
+                                            Finaliza
+                                        </span>
+                                        <p className="mt-1 font-bold">
+                                            {formatDate(event.endDate)}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        )
                     )}
                 </header>
 
