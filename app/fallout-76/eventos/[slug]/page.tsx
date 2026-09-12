@@ -1,6 +1,6 @@
+import RichContent from '@/components/content/RichContent'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import { PortableText } from '@portabletext/react'
 import imageUrlBuilder from '@sanity/image-url'
 import type { Metadata } from 'next'
 import { client } from '@/sanity/lib/client'
@@ -164,6 +164,7 @@ function formatDate(date?: string) {
     if (!date) return null
 
     return new Intl.DateTimeFormat('es-ES', {
+        timeZone: 'Europe/Madrid',
         day: 'numeric',
         month: 'long',
         year: 'numeric',
@@ -519,56 +520,14 @@ export default async function EventPage({
                 {event.body && event.body.length > 0 && (
                     <section className="mt-12">
                         <div className="prose prose-invert max-w-none">
-                            <PortableText
+                            <RichContent
                                 value={event.body}
                                 components={{
-                                    block: {
-                                        h1: ({children}) => (
-                                            <h1 className="mb-5 mt-12 text-4xl font-black leading-tight">
-                                                {children}
-                                            </h1>
-                                        ),
-                                        h2: ({children}) => (
-                                            <h2 className="mb-4 mt-10 text-3xl font-black leading-tight">
-                                                {children}
-                                            </h2>
-                                        ),
-                                        h3: ({children}) => (
-                                            <h3 className="mb-3 mt-8 text-2xl font-black leading-tight">
-                                                {children}
-                                            </h3>
-                                        ),
-                                        h4: ({children}) => (
-                                            <h4 className="mb-3 mt-7 text-xl font-bold leading-tight">
-                                                {children}
-                                            </h4>
-                                        ),
-                                        h5: ({children}) => (
-                                            <h5 className="mb-2 mt-6 text-lg font-bold">
-                                                {children}
-                                            </h5>
-                                        ),
-                                        h6: ({children}) => (
-                                            <h6 className="mb-2 mt-5 font-bold uppercase tracking-wide">
-                                                {children}
-                                            </h6>
-                                        ),
-                                        normal: ({children}) => (
-                                            <p className="my-4 leading-8 text-text-primary">
-                                                {children}
-                                            </p>
-                                        ),
-                                        blockquote: ({children}) => (
-                                            <blockquote className="my-6 border-l-4 border-secondary pl-5 italic text-text-secondary">
-                                                {children}
-                                            </blockquote>
-                                        ),
-                                    },
                                     types: {
                                         /*
                                          * BLOQUE DE RECOMPENSAS
                                          */
-                                        eventRewardsBlock: ({ value }) => (
+                                        eventRewardsBlock: ({ value }: { value: { title?: string; description?: string } }) => (
                                             <div className="not-prose">
                                                 <RewardsBlock
                                                     rewards={rewards}
@@ -581,7 +540,7 @@ export default async function EventPage({
                                         /*
                                          * BLOQUE DE TRAJES
                                          */
-                                        eventOutfitsBlock: ({ value }) => (
+                                        eventOutfitsBlock: ({ value }: { value: { title?: string; description?: string } }) => (
                                             <div className="not-prose">
                                                 <OutfitSection
                                                     outfits={outfits}
@@ -594,7 +553,7 @@ export default async function EventPage({
                                         /*
                                          * BLOQUE DE RECOMPENSAS DE PAQUETES
                                          */
-                                        eventPackageRewardsBlock: ({ value }) => (
+                                        eventPackageRewardsBlock: ({ value }: { value: { title?: string; description?: string } }) => (
                                             <div className="not-prose">
                                                 <PackageRewardsSection
                                                     rewards={packageRewards}
@@ -602,89 +561,6 @@ export default async function EventPage({
                                                     description={value.description}
                                                 />
                                             </div>
-                                        ),
-
-                                        /*
-                                         * IMAGEN NORMAL
-                                         */
-                                        image: ({ value }) => (
-                                            <figure className="my-8">
-                                                <div className="relative mx-auto aspect-video max-w-3xl overflow-hidden rounded-2xl bg-surface">
-                                                    <Image
-                                                        src={urlFor(value)
-                                                            .width(1400)
-                                                            .url()}
-                                                        alt={
-                                                            value.alt ||
-                                                            'Imagen del evento'
-                                                        }
-                                                        fill
-                                                        className="object-contain"
-                                                    />
-                                                </div>
-
-                                                {value.caption && (
-                                                    <figcaption className="mt-2 text-center text-sm text-text-secondary">
-                                                        {value.caption}
-                                                    </figcaption>
-                                                )}
-                                            </figure>
-                                        ),
-
-                                        /*
-                                         * GALERÍA
-                                         */
-                                        gallery: ({ value }) => (
-                                            <section className="my-10">
-                                                {value.title && (
-                                                    <h3 className="mb-5 text-2xl font-black">
-                                                        {value.title}
-                                                    </h3>
-                                                )}
-
-                                                <div className="grid gap-4 sm:grid-cols-2">
-                                                    {value.images?.map(
-                                                        (
-                                                            image: any,
-                                                            index: number,
-                                                        ) => (
-                                                            <figure
-                                                                key={
-                                                                    image._key ||
-                                                                    index
-                                                                }
-                                                                className="overflow-hidden rounded-2xl border border-surface-light bg-surface"
-                                                            >
-                                                                <div className="relative aspect-video">
-                                                                    <Image
-                                                                        src={urlFor(
-                                                                            image,
-                                                                        )
-                                                                            .width(
-                                                                                1000,
-                                                                            )
-                                                                            .url()}
-                                                                        alt={
-                                                                            image.alt ||
-                                                                            `Imagen ${index + 1}`
-                                                                        }
-                                                                        fill
-                                                                        className="object-contain"
-                                                                    />
-                                                                </div>
-
-                                                                {image.caption && (
-                                                                    <figcaption className="p-3 text-sm text-text-secondary">
-                                                                        {
-                                                                            image.caption
-                                                                        }
-                                                                    </figcaption>
-                                                                )}
-                                                            </figure>
-                                                        ),
-                                                    )}
-                                                </div>
-                                            </section>
                                         ),
                                     },
                                 }}

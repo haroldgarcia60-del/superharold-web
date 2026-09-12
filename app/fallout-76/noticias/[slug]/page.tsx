@@ -1,10 +1,7 @@
-import Image from 'next/image'
+import RichContent from '@/components/content/RichContent'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
-import {PortableText, type PortableTextComponents} from '@portabletext/react'
-import ImageGallery from '@/components/ImageGallery'
 import {client} from '@/sanity/lib/client'
-import {urlFor} from '@/sanity/lib/image'
 
 type PortableTextBlock = {
   _key: string
@@ -38,172 +35,6 @@ type PageProps = {
   params: Promise<{
     slug: string
   }>
-}
-
-type ContentImageValue = {
-  asset?: {
-    _ref: string
-    _type: string
-  }
-  alt?: string
-  caption?: string
-}
-
-type GalleryImageValue = {
-  _key?: string
-  asset?: {
-    _ref: string
-    _type: string
-  }
-  alt?: string
-  caption?: string
-}
-
-type GalleryValue = {
-  title?: string
-  images?: GalleryImageValue[]
-}
-
-const portableTextComponents: PortableTextComponents = {
-  block: {
-    normal: ({children}) => (
-      <p className="my-5 text-base leading-8 text-text-secondary md:text-lg">
-        {children}
-      </p>
-    ),
-
-    h2: ({children}) => (
-      <h2 className="mb-4 mt-10 text-3xl font-black text-white">
-        {children}
-      </h2>
-    ),
-
-    h3: ({children}) => (
-      <h3 className="mb-3 mt-8 text-2xl font-black text-white">
-        {children}
-      </h3>
-    ),
-
-    blockquote: ({children}) => (
-      <blockquote className="my-8 border-l-4 border-primary pl-5 italic text-text-secondary">
-        {children}
-      </blockquote>
-    ),
-  },
-
-  list: {
-    bullet: ({children}) => (
-      <ul className="my-6 list-disc space-y-2 pl-6 text-text-secondary">
-        {children}
-      </ul>
-    ),
-
-    number: ({children}) => (
-      <ol className="my-6 list-decimal space-y-2 pl-6 text-text-secondary">
-        {children}
-      </ol>
-    ),
-  },
-
-  listItem: {
-    bullet: ({children}) => (
-      <li className="leading-7">
-        {children}
-      </li>
-    ),
-
-    number: ({children}) => (
-      <li className="leading-7">
-        {children}
-      </li>
-    ),
-  },
-
-  marks: {
-    strong: ({children}) => (
-      <strong className="font-bold text-white">
-        {children}
-      </strong>
-    ),
-
-    em: ({children}) => (
-      <em className="italic">
-        {children}
-      </em>
-    ),
-
-    link: ({value, children}) => {
-      const href =
-        typeof value?.href === 'string'
-          ? value.href
-          : '#'
-
-      const external = href.startsWith('http')
-
-      return (
-        <a
-          href={href}
-          target={external ? '_blank' : undefined}
-          rel={external ? 'noopener noreferrer' : undefined}
-          className="font-semibold text-primary underline decoration-primary/40 underline-offset-4 transition hover:text-primary-pressed"
-        >
-          {children}
-        </a>
-      )
-    },
-  },
-
-  types: {
-    // IMAGEN INDIVIDUAL
-    image: ({value}) => {
-      const image = value as ContentImageValue
-
-      if (!image?.asset) {
-        return null
-      }
-
-      return (
-        <figure className="my-10">
-
-          <div className="overflow-hidden rounded-2xl border border-surface-light bg-background">
-            <Image
-              src={urlFor(image)
-                .width(1200)
-                .url()}
-              alt={image.alt || 'Imagen de la noticia'}
-              width={1200}
-              height={800}
-              className="h-auto w-full object-contain"
-              sizes="(max-width: 1024px) 100vw, 960px"
-            />
-          </div>
-
-          {image.caption && (
-            <figcaption className="mt-3 text-center text-sm italic text-text-secondary">
-              {image.caption}
-            </figcaption>
-          )}
-
-        </figure>
-      )
-    },
-
-    // GALERÍA / SLIDER
-    gallery: ({value}) => {
-      const gallery = value as GalleryValue
-
-      if (!gallery.images || gallery.images.length === 0) {
-        return null
-      }
-
-      return (
-        <ImageGallery
-          title={gallery.title}
-          images={gallery.images}
-        />
-      )
-    },
-  },
 }
 
 export default async function NewsPage({params}: PageProps) {
@@ -259,6 +90,7 @@ export default async function NewsPage({params}: PageProps) {
 
           <time className="mt-5 block text-sm text-text-secondary">
             {new Date(article.publishedAt).toLocaleDateString('es-ES', {
+              timeZone: 'Europe/Madrid',
               day: '2-digit',
               month: 'long',
               year: 'numeric',
@@ -273,13 +105,10 @@ export default async function NewsPage({params}: PageProps) {
 
         </header>
 
-        {/* CONTENIDO REAL DE SANITY */}
+        {/* CONTENIDO DE SANITY */}
         {article.content && article.content.length > 0 && (
           <section className="mt-10 rounded-2xl border border-surface-light bg-surface p-6 md:p-10">
-            <PortableText
-              value={article.content}
-              components={portableTextComponents}
-            />
+            <RichContent value={article.content} />
           </section>
         )}
 
