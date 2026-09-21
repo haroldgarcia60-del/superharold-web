@@ -9,6 +9,9 @@ import {
   type MinervaVisit,
 } from '@/data/minerva/minervaSchedule'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 type MinervaPlan = {
   formId: string
   name: string
@@ -39,7 +42,11 @@ function getPlansForVisit(visit: MinervaVisit) {
     (list) => list.number === visit.listNumber,
   )
 
-  if (!saleList) return []
+  if (!saleList) {
+    throw new Error(
+      `MINERVA ERROR: No existe la Lista ${visit.listNumber}`,
+    )
+  }
 
   const ids = new Set<string>()
 
@@ -49,7 +56,11 @@ function getPlansForVisit(visit: MinervaVisit) {
         (list) => list.number === componentListNumber,
       )
 
-      if (!componentList) continue
+      if (!componentList) {
+        throw new Error(
+          `MINERVA ERROR: No existe la lista componente ${componentListNumber}`,
+        )
+      }
 
       for (const formId of componentList.planFormIds) {
         ids.add(formId)
@@ -57,15 +68,29 @@ function getPlansForVisit(visit: MinervaVisit) {
     }
   } else {
     for (const formId of saleList.planFormIds) {
+      if (ids.has(formId)) {
+        throw new Error(
+          `MINERVA ERROR: El FormID ${formId} está duplicado en la Lista ${visit.listNumber}`,
+        )
+      }
+
       ids.add(formId)
     }
   }
 
-  return Array.from(ids)
-    .map((formId) =>
-      data.plans.find((plan) => plan.formId === formId),
+  return Array.from(ids).map((formId) => {
+    const plan = data.plans.find(
+      (plan) => plan.formId === formId,
     )
-    .filter((plan): plan is MinervaPlan => Boolean(plan))
+
+    if (!plan) {
+      throw new Error(
+        `MINERVA ERROR: El FormID ${formId} de la Lista ${visit.listNumber} no existe en plans`,
+      )
+    }
+
+    return plan
+  })
 }
 
 export default function MinervaPage() {
