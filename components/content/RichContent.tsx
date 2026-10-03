@@ -1,5 +1,5 @@
-import {PortableText, type PortableTextComponents} from '@portabletext/react'
-import {urlFor} from '@/sanity/lib/image'
+import { PortableText, type PortableTextComponents } from '@portabletext/react'
+import { urlFor } from '@/sanity/lib/image'
 import ArticleImage from '@/components/ArticleImage'
 import ImageGallery from '@/components/ImageGallery'
 
@@ -25,37 +25,37 @@ type GalleryValue = {
 
 const portableTextComponents: PortableTextComponents = {
   block: {
-    normal: ({children}) => (
+    normal: ({ children }) => (
       <p className="my-5 text-base leading-8 text-text-secondary md:text-lg">
         {children}
       </p>
     ),
 
-    h1: ({children}) => (
+    h1: ({ children }) => (
       <h1 className="mb-5 mt-12 text-4xl font-black leading-tight text-white">
         {children}
       </h1>
     ),
 
-    h2: ({children}) => (
+    h2: ({ children }) => (
       <h2 className="mb-4 mt-10 text-3xl font-black leading-tight text-white">
         {children}
       </h2>
     ),
 
-    h3: ({children}) => (
+    h3: ({ children }) => (
       <h3 className="mb-3 mt-8 text-2xl font-black leading-tight text-white">
         {children}
       </h3>
     ),
 
-    h4: ({children}) => (
+    h4: ({ children }) => (
       <h4 className="mb-3 mt-7 text-xl font-bold leading-tight text-white">
         {children}
       </h4>
     ),
 
-    blockquote: ({children}) => (
+    blockquote: ({ children }) => (
       <blockquote className="my-8 border-l-4 border-primary pl-5 italic text-text-secondary">
         {children}
       </blockquote>
@@ -63,13 +63,13 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   list: {
-    bullet: ({children}) => (
+    bullet: ({ children }) => (
       <ul className="my-6 list-disc space-y-2 pl-7 text-text-secondary">
         {children}
       </ul>
     ),
 
-    number: ({children}) => (
+    number: ({ children }) => (
       <ol className="my-6 list-decimal space-y-2 pl-7 text-text-secondary">
         {children}
       </ol>
@@ -77,13 +77,13 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   listItem: {
-    bullet: ({children}) => (
+    bullet: ({ children }) => (
       <li className="leading-7">
         {children}
       </li>
     ),
 
-    number: ({children}) => (
+    number: ({ children }) => (
       <li className="leading-7">
         {children}
       </li>
@@ -91,26 +91,27 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   marks: {
-    strong: ({children}) => (
+    strong: ({ children }) => (
       <strong className="font-bold text-white">
         {children}
       </strong>
     ),
 
-    em: ({children}) => (
+    em: ({ children }) => (
       <em className="italic">
         {children}
       </em>
     ),
 
-    code: ({children}) => (
+    code: ({ children }) => (
       <code className="rounded bg-background px-1.5 py-0.5 font-mono text-sm text-primary">
         {children}
       </code>
     ),
 
-    link: ({children, value}) => {
+    link: ({ children, value }) => {
       const href = value?.href || ''
+
       const external =
         href.startsWith('http://') ||
         href.startsWith('https://')
@@ -129,7 +130,7 @@ const portableTextComponents: PortableTextComponents = {
   },
 
   types: {
-    image: ({value}) => {
+    image: ({ value }) => {
       if (!value?.asset) {
         return null
       }
@@ -147,7 +148,7 @@ const portableTextComponents: PortableTextComponents = {
       )
     },
 
-    gallery: ({value}) => {
+    gallery: ({ value }) => {
       const gallery = value as GalleryValue
 
       if (!gallery.images || gallery.images.length === 0) {
@@ -166,15 +167,26 @@ const portableTextComponents: PortableTextComponents = {
 
 export default function RichContent({
   value,
+  components,
 }: RichContentProps) {
   if (!value || value.length === 0) {
     return null
   }
 
+  const mergedComponents: PortableTextComponents = {
+    ...portableTextComponents,
+    ...components,
+
+    types: {
+      ...portableTextComponents.types,
+      ...components?.types,
+    },
+  }
+
   return (
     <PortableText
       value={value}
-      components={portableTextComponents}
+      components={mergedComponents}
     />
   )
 }
